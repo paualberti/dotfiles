@@ -2,6 +2,7 @@
 
 # List of packages to install
 read -r -d '' PACKAGES <<EOL
+stow
 vim
 ripgrep
 gnome-tweaks
@@ -89,3 +90,5 @@ echo "Total packages installed: $installed_count"
 echo "Version: $(nvim --version)"
 
 sudo apt autoremove -y
+
+stow .
