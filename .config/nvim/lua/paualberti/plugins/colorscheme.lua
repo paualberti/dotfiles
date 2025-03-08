@@ -1,4 +1,5 @@
 return {
+	-- tairiki
 	{
 		"deparr/tairiki.nvim",
 		lazy = false,
@@ -7,30 +8,35 @@ return {
 			palette = "dimmed",
 			default_dark = "dimmed",
 			default_light = "dimmed",
-			transparent = false,
+			transparent = true,
 			code_style = {
-				comments = "none",
+				comments = { italic = false },
 			},
 		},
 		keys = { { "<leader>utt", "<Cmd>colorscheme tairiki<CR>", desc = "Tairiki" } },
+		init = function()
+			-- require("tairiki").load()
+		end,
 	},
+	-- nightfox
 	{
 		"EdenEast/nightfox.nvim",
 		lazy = false,
 		priority = 1000,
 		opts = {
 			options = {
-				transparent = false,
+				transparent = true,
 			},
 		},
 		init = function()
-			vim.cmd([[colorscheme nordfox]])
+			vim.cmd([[colorscheme nightfox]])
 		end,
 		keys = {
-			{ "<leader>utN", "<Cmd>colorscheme nightfox<CR>", desc = "Nightfox" },
-			{ "<leader>utn", "<Cmd>colorscheme nordfox<CR>", desc = "Nordfox" },
+			{ "<leader>utn", "<Cmd>colorscheme nightfox<CR>", desc = "Nightfox" },
+			{ "<leader>utN", "<Cmd>colorscheme nordfox<CR>", desc = "Nordfox" },
 		},
 	},
+	-- catppuccin
 	{
 		"catppuccin/nvim",
 		lazy = false,
@@ -41,12 +47,29 @@ return {
 				light = "macchiato",
 				dark = "macchiato",
 			},
-			transparent_background = false,
+			transparent_background = true,
 			styles = {
 				comments = {},
 				conditionals = {},
 			},
 		},
 		keys = { { "<leader>utc", "<Cmd>colorscheme catppuccin<CR>", desc = "Catppuccin" } },
+	},
+	-- gruvbox
+	{
+		"ellisonleao/gruvbox.nvim",
+		lazy = false,
+		priority = 1000,
+		opts = {
+			italic = {
+				strings = false,
+				emphasis = false,
+				comments = false,
+				operators = false,
+				folds = false,
+			},
+			transparent_mode = true,
+		},
+		keys = { { "<leader>utg", "<Cmd>colorscheme gruvbox<CR>", desc = "Gruvbox" } },
 	},
 }

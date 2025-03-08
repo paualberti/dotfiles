@@ -43,10 +43,10 @@ return {
 			vim.keymap.set("n", "<leader>cm", "<Cmd>Mason<CR>", { desc = "Mason" })
 
 			local ensure_installed = vim.tbl_keys(opts.servers or {})
-			vim.list_extend(ensure_installed, {
-				"stylua", -- Used to format Lua code
-				"clang-format",
-			})
+			-- vim.list_extend(ensure_installed, {
+			-- 	"stylua", -- Used to format Lua code
+			-- 	"clang-format",
+			-- })
 			require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 			for server, config in pairs(opts.servers) do
 				config.capabilities = require("blink.cmp").get_lsp_capabilities(config.capabilities)
