@@ -17,10 +17,6 @@ vim.keymap.set("n", "J", "mzJ`z")
 vim.keymap.set("x", "<leader>rf", '"hy:%s/<C-r>h/', { desc = "in File" })
 vim.keymap.set("x", "<leader>rl", '"hy:s/<C-r>h/', { desc = "in Line" })
 
--- Scrolling
-vim.keymap.set("n", "<ScrollMouseDown", "j", { desc = "Scroll Down" })
-vim.keymap.set("n", "<ScrollMouseUp", "k", { desc = "Scroll Up" })
-
 -- Disable Q because it's hard to understand
 vim.keymap.set({ "n", "x" }, "Q", function()
 	print("Q is disabled")
