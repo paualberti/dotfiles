@@ -2,6 +2,7 @@
 
 # List of packages to install
 read -r -d '' PACKAGES <<EOL
+git
 stow
 vim
 ripgrep
