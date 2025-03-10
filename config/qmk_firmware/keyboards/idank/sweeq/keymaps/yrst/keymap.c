@@ -24,7 +24,7 @@
 // #include "masks/crkbd.h"
 
 // enum layer_number { _HOME, _SYM, _HOME, _MAJ, _QWTY, _SIM, _NUM, _GLOB };
-enum layer_number { _HOME, _MAJ, _QWTY, _NUM, _SIM, _NAV, _GLOB };
+enum layer_number { _HOME, _MAJ, _QWTY, _NUM, _SIM, _NAV };
 
 // see https://github.com/ChuseCubr/mini-ryoku for layout details
 // clang-format off
@@ -35,5 +35,4 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_NUM]  = LAYOUT_mask(_NUM_LAYOUT),
     [_SIM]  = LAYOUT_mask(_SIM_LAYOUT),
     [_NAV]  = LAYOUT_mask(_NAV_LAYOUT),
-    [_GLOB] = LAYOUT_mask(_GLOB_LAYOUT),
 };

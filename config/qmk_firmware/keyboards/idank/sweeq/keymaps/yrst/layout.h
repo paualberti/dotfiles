@@ -1,7 +1,14 @@
 /* Copyright 2023 ChuseCubr */
 /* https://github.com/ChuseCubr/mini-ryoku */
 
-/* This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 2 of the License, or (at your option) any later version. This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. You should have received a copy of the GNU General Public License along with this program. If not, see <http://www.gnu.org/licenses/>. */
+/* This program is free software: you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License as published by the Free Software
+ * Foundation, either version 2 of the License, or (at your option) any later
+ * version. This program is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+ * FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
+ * details. You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>. */
 
 #include "keycodes.h"
 
@@ -16,13 +23,13 @@
        ES_P    , ES_L    , ES_W    , ES_M    , ES_Q    ,      ES_Z    , ES_F    , ES_O    , ES_U    , ES_QUOT ,     \
 /*   |-------------------------------------------------|    |-------------------------------------------------|   */\
 /*   | Y       | R       | S       | T       | K       |    | J       | N       | A       | E       | I       |   */\
-       ES_Y    , LT_R    , MT_S    , MT_T    , ES_K    ,      ES_J    , MT_N    , MT_A    , LT_E    , ES_I    ,     \
+       ES_Y    , ES_R    , MT_S    , MT_T    , ES_K    ,      ES_J    , MT_N    , MT_A    , ES_E    , ES_I    ,     \
 /*   |-------------------------------------------------|    |-------------------------------------------------|   */\
 /*   | Z       | X       | C       | D       | V       |    | K       | H       | ,       | ;       | .       |   */\
        ES_G    , ES_X    , ES_C    , ES_D    , ES_V    ,      ES_B    , ES_H    , ES_COMM , ES_SCLN , ES_DOT  ,     \
 /*   `-------------------------------------------------|    |-------------------------------------------------'   */\
 /*                                 |         |         |    |         |         |                                 */\
-                                     LT_SPC  , MO_MAJ  ,      KC_RCTL , LT_ESC
+                                     LT_SPC  , MO_MAJ  ,      KC_RCTL , MO_SIM
 /*                                 `-------------------'    `-------------------'                                 */
 
 
@@ -38,7 +45,7 @@
        S(ES_G) , S(ES_X) , S(ES_C) , S(ES_D) , S(ES_V) ,      S(ES_B) , S(ES_H) , ES_LABK , ES_COLN , ES_RABK ,     \
 /*   `-------------------------------------------------|    |-------------------------------------------------'   */\
 /*                                 |         |         |    |         |         |                                 */\
-                                     LT_SPC  , KC_NO   ,      KC_RCTL , LT_ESC
+                                     LT_SPC  , KC_NO   ,      KC_RCTL , MO_SIM
 /*                                 `-------------------'    `-------------------'                                 */
 
 
@@ -48,13 +55,13 @@
        ES_Q    , ES_W    , ES_E    , ES_R    , ES_T    ,      ES_Y    , ES_U    , ES_I    , ES_O    , ES_P    ,     \
 /*   |-------------------------------------------------|    |-------------------------------------------------|   */\
 /*   | A       | S       | D       | F       | G       |    | H       | J       | K       | L       | Ñ       |   */\
-       ES_A    , LT_s    , MT_d    , MT_f    , ES_G    ,      ES_H    , MT_j    , MT_k    , LT_l    , ES_NTIL ,     \
+       ES_A    , ES_S    , MT_d    , MT_f    , ES_G    ,      ES_H    , MT_j    , MT_k    , ES_L    , ES_NTIL ,     \
 /*   |-------------------------------------------------|    |-------------------------------------------------|   */\
 /*   | Q       | X       | C       | V       | B       |    | N       | M       | , ;     | . :     | - _     |   */\
        ES_Q    , ES_X    , ES_C    , ES_V    , ES_B    ,      ES_N    , ES_M    , ES_COMM , ES_DOT  , ES_MINS ,     \
 /*   `-------------------------------------------------|    |-------------------------------------------------'   */\
 /*                                 |         |         |    |         |         |                                 */\
-                                     LT_SPC  , KC_LSFT ,      KC_RCTL , LT_ESC
+                                     LT_SPC  , KC_LSFT ,      KC_RCTL , MO_SIM
 /*                                 `-------------------'    `-------------------'                                 */
 
 
@@ -70,53 +77,38 @@
        KC_NO   , ES_BULT , ES_IQUE , ES_IEXL , KC_SPC  ,      KC_NO   , KC_1    , KC_2    , KC_3    , KC_DOT  ,     \
 /*   `-------------------------------------------------|    |-------------------------------------------------'   */\
 /*                                 |         |         |    |         |         |                                 */\
-                                     TO_HOME , KC_LCTL ,      KC_LALT , LT_ESC
+                                     KC_NO   , KC_LCTL ,      KC_LALT , MO_NAV
 /*                                 `-------------------'    `-------------------'                                 */
 
 
 #define _SIM_LAYOUT \
 /*   ,-------------------------------------------------.    ,-------------------------------------------------.   */\
-/*   | DEL     | @       | #       | $       | %       |    | ^       | &       | *       | €       | BSPC    |   */\
-       KC_DEL  , ES_AT   , ES_HASH , ES_DLR  , ES_PERC ,      ES_CIRC , ES_AMPR , ES_ASTR , ES_EUR  , KC_BSPC ,     \
+/*   | ESC     | @       | #       | $       | %       |    | ^       | &       | *       | BSPC    | DEL     |   */\
+       KC_ESC  , ES_AT   , ES_HASH , ES_DLR  , ES_PERC ,      ES_CIRC , ES_AMPR , ES_ASTR , KC_BSPC , KC_DEL  ,     \
 /*   |-------------------------------------------------|    |-------------------------------------------------|   */\
 /*   | TAB     | =       | _       | -       | +       |    | \       | (       | )       | |       | ENT     |   */\
        KC_TAB  , ES_EQL  , ES_UNDS , ES_MINS , ES_PLUS ,      ES_BSLS , ES_LPRN , ES_RPRN , ES_PIPE , KC_ENT  ,     \
 /*   |-------------------------------------------------|    |-------------------------------------------------|   */\
 /*   | S_TAB   | /       | ?       | !       | ~       |    | [       | {       | }       | ]       |         |   */\
-       S_TAB   , ES_SLSH , ES_QUES , ES_EXLM , ES_TILD ,      ES_LBRC , ES_LCBR , ES_RCBR , ES_RBRC , TO_NAV  ,     \
+       S_TAB   , ES_SLSH , ES_QUES , ES_EXLM , ES_TILD ,      ES_LBRC , ES_LCBR , ES_RCBR , ES_RBRC , ES_EUR  ,     \
 /*   `-------------------------------------------------|    |-------------------------------------------------'   */\
 /*                                 |         |         |    |         |         |                                 */\
-                                     KC_SPC  , KC_LCTL ,      KC_LALT , TO_NUM
+                                     MO_NAV  , KC_LCTL ,      KC_LALT , KC_NO
 /*                                 `-------------------'    `-------------------'                                 */
 
 
 #define _NAV_LAYOUT \
 /*   ,-------------------------------------------------.    ,-------------------------------------------------.   */\
-/*   | PSTE    | RGHT    | CT_RGHT | END     |         |    |         | FIND    |         | PGUP    |         |   */\
-       KC_PSTE , KC_RGHT , CT_RGHT , KC_END  , KC_NO   ,      KC_NO   , KC_FIND , KC_NO   , KC_PGUP , KC_NO   ,     \
+/*   | PSTE    | RGHT    | CT_RGHT | END     | BOOT    |    | BOOT    | FIND    |         | PGUP    | VOLU    |   */\
+       KC_PSTE , KC_RGHT , CT_RGHT , KC_END  , QK_BOOT ,      QK_BOOT , KC_FIND , KC_NO   , KC_PGUP , KC_VOLU ,     \
 /*   |-------------------------------------------------|    |-------------------------------------------------|   */\
-/*   | COPY    |         | HOME    |         | UP      |    | DOWN    |         |         |         |         |   */\
-       KC_COPY , KC_NO   , KC_HOME , KC_NO   , KC_UP   ,      KC_DOWN , KC_NO   , KC_NO   , KC_NO   , KC_NO   ,     \
+/*   | COPY    |         | HOME    |         | UP      |    | DOWN    |         | WBAK    | WFWD    | VOLD    |   */\
+       KC_COPY , KC_NO   , KC_HOME , KC_NO   , KC_UP   ,      KC_DOWN , KC_NO   , KC_WBAK , KC_WFWD , KC_VOLD ,     \
 /*   |-------------------------------------------------|    |-------------------------------------------------|   */\
 /*   |         |         |         | PGDN    |         |    | CT_LEFT | LEFT    |         |         |         |   */\
-       KC_NO   , KC_NO   , KC_NO   , KC_PGDN , KC_NO   ,      CT_LEFT , KC_LEFT , KC_NO   , KC_NO   , TO_GLOB ,     \
+       TO_HOME , KC_NO   , KC_NO   , KC_PGDN , TO_QWTY ,      CT_LEFT , KC_LEFT , KC_NO   , KC_NO   , TO_HOME ,     \
 /*   `-------------------------------------------------|    |-------------------------------------------------'   */\
 /*                                 |         |         |    |         |         |                                 */\
-                                     TO_HOME , KC_LCTL ,      KC_LALT , TO_NUM
-/*                                 `-------------------'    `-------------------'                                 */
-
-#define _GLOB_LAYOUT \
-/*   ,-------------------------------------------------.    ,-------------------------------------------------.   */\
-/*   | PSCR    | WBAK    | UP      | WFWD    | BOOT    |    |         | F7      | F8      | F9      | F10     |   */\
-       KC_PSCR , KC_WBAK , KC_UP   , KC_WFWD , QK_BOOT ,      KC_NO   , KC_F7   , KC_F8   , KC_F9   , KC_F10  ,     \
-/*   |-------------------------------------------------|    |-------------------------------------------------|   */\
-/*   | VOLU    | LEFT    | DOWN    | RGHT    | WHLU    |    |         | F4      | F5      | F6      | F11     |   */\
-       KC_VOLU , KC_LEFT , KC_DOWN , KC_RGHT , MS_WHLU ,      KC_NO   , KC_F4   , KC_F5   , KC_F6   , KC_F11  ,     \
-/*   |-------------------------------------------------|    |-------------------------------------------------|   */\
-/*   | VOLD    | WHLL    | WHLD    | WHLR    |         |    |         | F1      | F2      | F3      | F12     |   */\
-       KC_VOLD , MS_WHLL , MS_WHLD , MS_WHLR , TO_QWTY ,      KC_NO   , KC_F1   , KC_F2   , KC_F3   , KC_F12  ,     \
-/*   `-------------------------------------------------|    |-------------------------------------------------'   */\
-/*                                 |         |         |    |         |         |                                 */\
-                                     TO_HOME , KC_LCTL ,      KC_LALT , TO_NUM
+                                     KC_NO   , KC_LCTL ,      KC_LALT , KC_NO
 /*                                 `-------------------'    `-------------------'                                 */
 

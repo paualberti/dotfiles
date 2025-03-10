@@ -120,3 +120,4 @@ export PATH=$PATH:$HOME/.local/bin
 export PATH=$PATH:/opt/nvim
 YRST=$HOME/qmk_firmware/keyboards/idank/sweeq/keymaps/yrst/
 bluetoothctl connect 41:42:0B:3D:1E:5F &>> /dev/null
+eval "$(zoxide init bash)"
