@@ -83,8 +83,8 @@
 
 #define _SIM_LAYOUT \
 /*   ,-------------------------------------------------.    ,-------------------------------------------------.   */\
-/*   | ESC     | @       | #       | $       | %       |    | ^       | &       | *       | BSPC    | DEL     |   */\
-       KC_ESC  , ES_AT   , ES_HASH , ES_DLR  , ES_PERC ,      ES_CIRC , ES_AMPR , ES_ASTR , KC_BSPC , KC_DEL  ,     \
+/*   | ESC     | @       | #       | $       | %       |    | ^       | &       | *       | DEL     | BSPC    |   */\
+       KC_ESC  , ES_AT   , ES_HASH , ES_DLR  , ES_PERC ,      ES_CIRC , ES_AMPR , ES_ASTR , KC_DEL  , KC_BSPC ,     \
 /*   |-------------------------------------------------|    |-------------------------------------------------|   */\
 /*   | TAB     | =       | _       | -       | +       |    | \       | (       | )       | |       | ENT     |   */\
        KC_TAB  , ES_EQL  , ES_UNDS , ES_MINS , ES_PLUS ,      ES_BSLS , ES_LPRN , ES_RPRN , ES_PIPE , KC_ENT  ,     \
