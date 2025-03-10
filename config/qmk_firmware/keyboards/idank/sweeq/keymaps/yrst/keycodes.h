@@ -29,13 +29,6 @@
 #define MT_N MT(MOD_RGUI, KC_N)
 #define MT_A MT(MOD_LALT, KC_A)
 
-// qwerty
-#define MT_f MT(MOD_LGUI, ES_F)
-#define MT_d MT(MOD_LALT, ES_D)
-
-#define MT_j MT(MOD_RGUI, ES_J)
-#define MT_k MT(MOD_LALT, ES_K)
-
 // arrows
 #define CT_LEFT C(KC_LEFT)
 #define CT_RGHT C(KC_RGHT)

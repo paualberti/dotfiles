@@ -55,7 +55,7 @@
        ES_Q    , ES_W    , ES_E    , ES_R    , ES_T    ,      ES_Y    , ES_U    , ES_I    , ES_O    , ES_P    ,     \
 /*   |-------------------------------------------------|    |-------------------------------------------------|   */\
 /*   | A       | S       | D       | F       | G       |    | H       | J       | K       | L       | Ñ       |   */\
-       ES_A    , ES_S    , MT_d    , MT_f    , ES_G    ,      ES_H    , MT_j    , MT_k    , ES_L    , ES_NTIL ,     \
+       ES_A    , ES_S    , ES_D    , ES_F    , ES_G    ,      ES_H    , ES_J    , ES_K    , ES_L    , ES_NTIL ,     \
 /*   |-------------------------------------------------|    |-------------------------------------------------|   */\
 /*   | Q       | X       | C       | V       | B       |    | N       | M       | , ;     | . :     | - _     |   */\
        ES_Q    , ES_X    , ES_C    , ES_V    , ES_B    ,      ES_N    , ES_M    , ES_COMM , ES_DOT  , ES_MINS ,     \
@@ -77,14 +77,14 @@
        KC_NO   , ES_BULT , ES_IQUE , ES_IEXL , KC_SPC  ,      KC_NO   , KC_1    , KC_2    , KC_3    , KC_DOT  ,     \
 /*   `-------------------------------------------------|    |-------------------------------------------------'   */\
 /*                                 |         |         |    |         |         |                                 */\
-                                     KC_NO   , KC_LCTL ,      KC_LALT , MO_NAV
+                                     KC_NO   , KC_LCTL ,      KC_LALT , MO_SIM
 /*                                 `-------------------'    `-------------------'                                 */
 
 
 #define _SIM_LAYOUT \
 /*   ,-------------------------------------------------.    ,-------------------------------------------------.   */\
-/*   | ESC     | @       | #       | $       | %       |    | ^       | &       | *       | DEL     | BSPC    |   */\
-       KC_ESC  , ES_AT   , ES_HASH , ES_DLR  , ES_PERC ,      ES_CIRC , ES_AMPR , ES_ASTR , KC_DEL  , KC_BSPC ,     \
+/*   | ESC     | @       | #       | $       | %       |    | ^       | &       | *       | BSPC    | DEL     |   */\
+       KC_ESC  , ES_AT   , ES_HASH , ES_DLR  , ES_PERC ,      ES_CIRC , ES_AMPR , ES_ASTR , KC_BSPC , KC_DEL  ,     \
 /*   |-------------------------------------------------|    |-------------------------------------------------|   */\
 /*   | TAB     | =       | _       | -       | +       |    | \       | (       | )       | |       | ENT     |   */\
        KC_TAB  , ES_EQL  , ES_UNDS , ES_MINS , ES_PLUS ,      ES_BSLS , ES_LPRN , ES_RPRN , ES_PIPE , KC_ENT  ,     \
@@ -93,20 +93,20 @@
        S_TAB   , ES_SLSH , ES_QUES , ES_EXLM , ES_TILD ,      ES_LBRC , ES_LCBR , ES_RCBR , ES_RBRC , ES_EUR  ,     \
 /*   `-------------------------------------------------|    |-------------------------------------------------'   */\
 /*                                 |         |         |    |         |         |                                 */\
-                                     MO_NAV  , KC_LCTL ,      KC_LALT , KC_NO
+                                     MO_NAV  , KC_LCTL ,      KC_LALT , MO_SIM
 /*                                 `-------------------'    `-------------------'                                 */
 
 
 #define _NAV_LAYOUT \
 /*   ,-------------------------------------------------.    ,-------------------------------------------------.   */\
-/*   | PSTE    | RGHT    | CT_RGHT | END     | BOOT    |    | BOOT    | FIND    |         | PGUP    | VOLU    |   */\
-       KC_PSTE , KC_RGHT , CT_RGHT , KC_END  , QK_BOOT ,      QK_BOOT , KC_FIND , KC_NO   , KC_PGUP , KC_VOLU ,     \
+/*   |         | RGHT    | CT_RGHT | END     | BOOT    |    | BOOT    | FIND    |         | PGUP    | VOLU    |   */\
+       KC_NO   , KC_RGHT , CT_RGHT , KC_END  , QK_BOOT ,      QK_BOOT , KC_FIND , KC_NO   , KC_PGUP , KC_VOLU ,     \
 /*   |-------------------------------------------------|    |-------------------------------------------------|   */\
-/*   | COPY    |         | HOME    |         | UP      |    | DOWN    |         | WBAK    | WFWD    | VOLD    |   */\
-       KC_COPY , KC_NO   , KC_HOME , KC_NO   , KC_UP   ,      KC_DOWN , KC_NO   , KC_WBAK , KC_WFWD , KC_VOLD ,     \
+/*   |         |         | HOME    |         | UP      |    | DOWN    |         | WBAK    | WFWD    | VOLD    |   */\
+       TO_HOME , KC_NO   , KC_HOME , KC_NO   , KC_UP   ,      KC_DOWN , KC_NO   , KC_WBAK , KC_WFWD , KC_VOLD ,     \
 /*   |-------------------------------------------------|    |-------------------------------------------------|   */\
 /*   |         |         |         | PGDN    |         |    | CT_LEFT | LEFT    |         |         |         |   */\
-       TO_HOME , KC_NO   , KC_NO   , KC_PGDN , TO_QWTY ,      CT_LEFT , KC_LEFT , KC_NO   , KC_NO   , TO_HOME ,     \
+       TO_QWTY , KC_NO   , KC_NO   , KC_PGDN , KC_NO   ,      CT_LEFT , KC_LEFT , KC_NO   , KC_NO   , TO_HOME ,     \
 /*   `-------------------------------------------------|    |-------------------------------------------------'   */\
 /*                                 |         |         |    |         |         |                                 */\
                                      KC_NO   , KC_LCTL ,      KC_LALT , KC_NO
