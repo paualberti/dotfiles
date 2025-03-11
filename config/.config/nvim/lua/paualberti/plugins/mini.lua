@@ -31,7 +31,10 @@ return {
 	{
 		"echasnovski/mini.sessions",
 		opts = {},
-		keys = { { "<C-s>", "<Cmd>lua MiniSessions.write(0)<CR>", desc = "Save Session" } },
+		keys = {
+			{ "<C-s>", "<Cmd>lua MiniSessions.write(0)<CR>", desc = "Save Session" },
+			{ "<C-l>", "<Cmd>lua MiniSessions.read()<CR>", desc = "Load Session" },
+		},
 	},
 	{ "echasnovski/mini.visits", opts = {} },
 
