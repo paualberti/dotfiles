@@ -1,6 +1,6 @@
 return {
 	-- Text editing
-	-- { "echasnovski/mini.ai", version = "*",  opts = {}},
+	{ "echasnovski/mini.ai", version = "*", opts = {} },
 	{ "echasnovski/mini.align", version = "*", opts = { mappings = { start_with_preview = "" } } },
 	-- { "echasnovski/mini.comment", version = "*",  opts = {}},
 	-- { "echasnovski/mini.completion", version = "*",  opts = {}},
