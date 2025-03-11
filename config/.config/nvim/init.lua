@@ -1,4 +1,4 @@
--- Configuration for neovim
+-- Autocmds, keymaps, opts, terminal workflow
 require("paualberti.config")
 
 -- [[ Install `lazy.nvim` plugin manager ]]

@@ -125,7 +125,8 @@ setxkbmap -layout us -variant yrst
 ```
 sudo apt install -y git python3-pip
 python3 -m pip install --user qmk
-echo 'PATH="$HOME/.local/bin:$PATH"' >> $HOME/.bashrc && source $HOME/.bashrc
+# uncomment next line if qmk is not found
+# echo 'PATH="$HOME/.local/bin:$PATH"' >> $HOME/.bashrc && source $HOME/.bashrc
 qmk setup
 qmk config user.keyboard=idank/sweeq
 qmk config user.keymap=yrst
