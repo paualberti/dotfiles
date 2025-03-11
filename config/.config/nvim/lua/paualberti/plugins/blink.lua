@@ -1,7 +1,9 @@
 return {
 	"saghen/blink.cmp",
+	event = "VeryLazy",
 	-- optional: provides snippets for the snippet source
 	dependencies = {
+		"nvim-tree/nvim-web-devicons",
 		-- "rafamadriz/friendly-snippets",
 		"onsails/lspkind.nvim",
 	},
@@ -30,7 +32,7 @@ return {
 
 		completion = {
 			menu = {
-				-- border = "single",
+				border = "single",
 				draw = {
 					components = {
 						kind_icon = {
@@ -44,7 +46,7 @@ return {
 										icon = dev_icon
 									end
 								else
-									icon = require("lspkind").symbolic(ctx.kind, {
+									icon = lspkind.symbolic(ctx.kind, {
 										mode = "symbol",
 									})
 								end
@@ -69,9 +71,9 @@ return {
 					},
 				},
 			},
-			-- documentation = { window = { border = "single" } },
+			documentation = { window = { border = "single" } },
 		},
-		-- signature = { window = { border = "single" } },
+		signature = { window = { border = "single" } },
 
 		-- enabled = function()
 		-- 	return not vim.tbl_contains({ "lua", "markdown" }, vim.bo.filetype)

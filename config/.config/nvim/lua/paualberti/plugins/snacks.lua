@@ -1,7 +1,8 @@
 return {
 	"folke/snacks.nvim",
-	priority = 1000,
 	lazy = false,
+	dependencies = "echasnovski/mini.icons",
+	priority = 1000,
 	opts = {
 		bigfile = { enabled = true },
 		dashboard = { enabled = true },
@@ -42,7 +43,7 @@ return {
 					},
 				},
 			},
-			debug = { scores = true },
+			debug = { scores = false },
 		},
 		quickfile = { enabled = true },
 		scroll = { enabled = true },

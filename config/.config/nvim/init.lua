@@ -15,7 +15,7 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
 	defaults = {
-		lazy = false,
+		lazy = true,
 		version = "*",
 		cond = nil,
 	},
@@ -31,5 +31,5 @@ require("lazy").setup({
 		fallback = false, -- Fallback to git when local plugin doesn't exist
 	},
 	checker = { enabled = true },
-	change_detection = { notify = true },
+	change_detection = { enabled = false },
 })
