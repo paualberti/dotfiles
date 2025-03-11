@@ -14,14 +14,22 @@ end ---@diagnostic disable-next-line: undefined-field
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-	{ import = "paualberti.plugins" },
-}, {
-	ui = {},
-	checker = {
-		enabled = true,
-		notify = false,
+	defaults = {
+		lazy = false,
+		version = "*",
+		cond = nil,
 	},
-	change_detection = {
-		notify = false,
+	spec = { import = "paualberti.plugins" },
+	rocks = { enabled = false },
+	dev = {
+		-- Directory where you store your local plugin projects. If a function is used,
+		-- the plugin directory (e.g. `~/projects/plugin-name`) must be returned.
+		---@type string | fun(plugin: LazyPlugin): string
+		path = "~/projects",
+		---@type string[] plugins that match these patterns will use your local versions instead of being fetched from GitHub
+		patterns = {}, -- For example {"folke"}
+		fallback = false, -- Fallback to git when local plugin doesn't exist
 	},
+	checker = { enabled = true },
+	change_detection = { notify = true },
 })

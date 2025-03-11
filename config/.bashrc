@@ -115,9 +115,17 @@ if ! shopt -oq posix; then
 		. /etc/bash_completion
 	fi
 fi
+
+update() {
+	path=$HOME/dotfiles/
+	rm -rf $path
+	git clone --filter=blob:none https://github.com/paualberti/dotfiles.git $path
+	cd $path
+	chmod +x setup.sh
+	./setup.sh
+	stow config
+}
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin"
 export PATH=$PATH:$HOME/.local/bin
 export PATH=$PATH:/opt/nvim
-YRST=$HOME/qmk_firmware/keyboards/idank/sweeq/keymaps/yrst/
 bluetoothctl connect 41:42:0B:3D:1E:5F &>> /dev/null
-eval "$(zoxide init bash)"
