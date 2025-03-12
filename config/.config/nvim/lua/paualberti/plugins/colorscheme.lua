@@ -19,9 +19,7 @@ return {
 		"EdenEast/nightfox.nvim",
 		priority = 1000,
 		opts = {
-			options = {
-				transparent = false,
-			},
+			options = { transparent = false },
 		},
 		init = function()
 			vim.cmd([[colorscheme nordfox]])
@@ -54,6 +52,7 @@ return {
 		"ellisonleao/gruvbox.nvim",
 		priority = 1000,
 		opts = {
+			bold = false,
 			italic = {
 				strings = false,
 				emphasis = false,
