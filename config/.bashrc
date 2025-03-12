@@ -125,7 +125,7 @@ update() {
 	./setup.sh
 	stow config
 }
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin"
+export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin"
 export PATH=$PATH:$HOME/.local/bin
 export PATH=$PATH:/opt/nvim
 # bluetoothctl connect 41:42:0B:3D:1E:5F &>> /dev/null

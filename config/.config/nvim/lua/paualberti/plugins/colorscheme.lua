@@ -22,7 +22,7 @@ return {
 			options = { transparent = false },
 		},
 		init = function()
-			vim.cmd([[colorscheme nordfox]])
+			vim.cmd("colorscheme nordfox")
 		end,
 		keys = {
 			{ "<leader>utN", "<Cmd>colorscheme nightfox<CR>", desc = "Nightfox" },

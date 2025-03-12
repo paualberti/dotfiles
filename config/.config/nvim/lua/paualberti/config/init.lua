@@ -5,6 +5,5 @@ vim.g.mapleader = " "
 
 require("paualberti.config.autocmd")
 require("paualberti.config.options")
-require("paualberti.config.keymaps.keymaps")
-require("paualberti.config.keymaps.toggle_keymaps")
+require("paualberti.config.keymaps")
 require("paualberti.config.terminal")
