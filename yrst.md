@@ -34,7 +34,7 @@ File to edit (sudo access is required)
 sudo vim /usr/share/X11/xkb/symbols/us
 ```
 
-The name of the file "us" is the name of the layout, inside there are various variants
+The name of the file "us" is the name of the layout, with a number of variants associated.
 
 ### Layout
 
@@ -107,7 +107,7 @@ xkb_symbols "yrst" {
 
 </details>
 
-<details><summary>ISO keyboard</summary>
+<details><summary>ISO keyboard (angle mod)</summary>
 
 ```
 partial alphanumeric_keys
@@ -186,7 +186,7 @@ setxkbmap -layout us -variant yrst
 
 </details>
 
---------------------
+---
 
 <details><summary>Using qmk with a programmable keyboard</summary>
 
