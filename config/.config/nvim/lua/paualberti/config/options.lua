@@ -24,7 +24,8 @@ vim.o.number = true -- Show line numbers
 vim.o.relativenumber = true -- Show line numbers
 vim.o.splitbelow = true -- Horizontal splits will be below
 vim.o.splitright = true -- Vertical splits will be to the right
-vim.o.hlsearch = false -- searches will not be highlighted
+vim.o.hlsearch = false -- Searches will not be highlighted
+vim.o.smoothscroll = true -- Scrolling works with screen lines
 vim.o.shiftwidth = 4 -- <TAB> is 4 spaces
 vim.o.tabstop = 4 -- Indent is 4 spaces
 vim.o.softtabstop = 4 -- Indent is 4 spaces
@@ -59,12 +60,6 @@ end
 
 -- Some opinioneted extra UI options
 vim.o.pumheight = 10 -- Make popup menu smaller
-
--- NOTE: Having `tab` present is needed because `^I` will be shown if
--- omitted (documented in `:h listchars`).
--- Having it equal to a default value should be less intrusive.
--- o.listchars = "tab:> ,extends:…,precedes:…,nbsp:␣" -- Define which helper symbols to show
--- vim.o.list = true -- Show some helper symbols
 
 -- Enable syntax highlighting if it wasn't already (as it is time consuming)
 if vim.fn.exists("syntax_on") ~= 1 then
