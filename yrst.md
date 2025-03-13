@@ -180,8 +180,8 @@ setxkbmap -layout us -variant yrst
 
 #### To make it a default in your system
 
-* cHANGE THE NAME FROM YRST TO AN EXISTING ONE, I.E "COLEMAK".
-* sELECT THAT LAYOUT FROM WITHIN THE SETTINGS GUI.
+* Change the name from yrst to an existing one, i.e "colemak".
+* Select that layout from within the settings gui.
 * Restart the session: restart or logout.
 
 </details>
