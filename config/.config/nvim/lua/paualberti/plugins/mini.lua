@@ -23,7 +23,7 @@ return {
 	{ "echasnovski/mini.diff", opts = {} },
 	{ "echasnovski/mini.extra", opts = {} },
 	{ "echasnovski/mini.files", opts = {} },
-	{ "echasnovski/mini-git", opts = {} },
+	-- { "echasnovski/mini-git", opts = {} },
 	{ "echasnovski/mini.jump", opts = {} },
 	{ "echasnovski/mini.jump2d", opts = {} },
 	{ "echasnovski/mini.misc", opts = {} },
@@ -40,7 +40,7 @@ return {
 
 	-- Appearance
 	{ "echasnovski/mini.animate", opts = { scroll = { enable = false }, resize = { enable = false } } },
-	{ "echasnovski/mini.base16", opts = {} },
+	-- { "echasnovski/mini.base16", opts = {} },
 	{ "echasnovski/mini.colors", opts = {} },
 	{ "echasnovski/mini.cursorword", opts = {} },
 	{
@@ -67,7 +67,7 @@ return {
 	{ "echasnovski/mini.indentscope", opts = {} },
 	{ "echasnovski/mini.map", opts = {} },
 	{ "echasnovski/mini.notify", event = "VeryLazy", opts = {} },
-	{ "echasnovski/mini.starter", opts = {} },
+	-- { "echasnovski/mini.starter", opts = {} },
 	{ "echasnovski/mini.statusline", lazy = false, opts = {} },
 	{ "echasnovski/mini.tabline", lazy = false, opts = {} },
 	{ "echasnovski/mini.trailspace", opts = {} },
