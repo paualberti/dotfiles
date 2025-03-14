@@ -8,7 +8,6 @@ return {
 			mappinqs = vim.g.have_nerd_font,
 		},
 		spec = {
-			{ mode = { "n", "x" }, "\\", group = "Toggle" },
 			{ mode = { "n", "x" }, "<leader>b", group = "Buffer" },
 			{ mode = { "n", "x" }, "<leader>c", group = "Code" },
 			{ mode = { "n", "x" }, "<leader>f", group = "Find" },
