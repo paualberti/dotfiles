@@ -46,6 +46,8 @@ if ! command -v nvim >/dev/null 2>&1; then
 	chmod +x nvim-linux-x86_64.appimage
 	sudo mkdir -p /opt/nvim
 	sudo mv nvim-linux-x86_64.appimage /opt/nvim/nvim
+else
+	echo neovim is already installed
 fi
 
 # Ghostty
@@ -59,6 +61,18 @@ if ! command -v ghostty >/dev/null 2>&1; then
 	curl -LO "$GHOSTTY_DEB_URL"
 	sudo dpkg -i "$GHOSTTY_DEB_FILE"
 	rm "$GHOSTTY_DEB_FILE"
+else
+	echo ghostty is already installed
+fi
+
+if ! command -v lazygit >/dev/null 2>&1; then
+	LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | \grep -Po '"tag_name": *"v\K[^"]*')
+	curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/download/v${LAZYGIT_VERSION}/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"
+	tar xf lazygit.tar.gz lazygit
+	sudo install lazygit -D -t /usr/local/bin/
+	rm lazygit.tar.gz lazygit
+else
+	echo lazygit is already installed
 fi
 
 # Convert the list into an array
