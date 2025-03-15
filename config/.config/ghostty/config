@@ -1,10 +1,10 @@
 font-family = SauceCodePro Nerd Font
 font-size = 13
+# theme = nordfox
 # theme = Tomorrow Night Eighties
-theme = nordfox
 # theme = catppuccin-macchiato
 shell-integration-features = no-cursor,sudo,no-title
 cursor-style = block
-background-opacity = 1.75
+background-opacity = 0.65
 mouse-hide-while-typing = true
 mouse-scroll-multiplier = 2

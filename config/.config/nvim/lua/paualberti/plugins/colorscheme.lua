@@ -1,19 +1,4 @@
 return {
-	-- tairiki
-	{
-		"deparr/tairiki.nvim",
-		priority = 1000,
-		opts = {
-			palette = "dimmed",
-			default_dark = "dimmed",
-			default_light = "dimmed",
-			transparent = false,
-			code_style = {
-				comments = { italic = false },
-			},
-		},
-		keys = { { "<leader>utt", "<Cmd>colorscheme tairiki<CR>", desc = "Tairiki" } },
-	},
 	-- nightfox
 	{
 		"EdenEast/nightfox.nvim",
@@ -29,39 +14,19 @@ return {
 			{ "<leader>utn", "<Cmd>colorscheme nordfox<CR>", desc = "Nordfox" },
 		},
 	},
-	-- catppuccin
+	-- tairiki
 	{
-		"catppuccin/nvim",
-		priority = 1000,
-		name = "catppuccin",
-		opts = {
-			background = {
-				light = "macchiato",
-				dark = "macchiato",
-			},
-			transparent_background = false,
-			styles = {
-				comments = {},
-				conditionals = {},
-			},
-		},
-		keys = { { "<leader>utc", "<Cmd>colorscheme catppuccin<CR>", desc = "Catppuccin" } },
-	},
-	-- gruvbox
-	{
-		"ellisonleao/gruvbox.nvim",
+		"deparr/tairiki.nvim",
 		priority = 1000,
 		opts = {
-			bold = false,
-			italic = {
-				strings = false,
-				emphasis = false,
-				comments = false,
-				operators = false,
-				folds = false,
+			palette = "dimmed",
+			default_dark = "dimmed",
+			default_light = "dimmed",
+			transparent = false,
+			code_style = {
+				comments = { italic = false },
 			},
-			transparent_mode = false,
 		},
-		keys = { { "<leader>utg", "<Cmd>colorscheme gruvbox<CR>", desc = "Gruvbox" } },
+		keys = { { "<leader>utt", "<Cmd>colorscheme tairiki<CR>", desc = "Tairiki" } },
 	},
 }
