@@ -13,7 +13,7 @@ vim.api.nvim_create_autocmd("TermClose", { -- Restore line numbers
 })
 
 -- Function to locate an existing terminal buffer
-function Locate_terminal()
+local function locate_terminal()
 	for _, buf in ipairs(vim.api.nvim_list_bufs()) do
 		if vim.bo[buf].buftype == "terminal" then
 			return buf -- Return terminal buffer number
@@ -23,7 +23,7 @@ function Locate_terminal()
 end
 
 local function close_open_terminals()
-	local term_bufnr = Locate_terminal()
+	local term_bufnr = locate_terminal()
 	if term_bufnr then
 		-- Close the existing terminals
 		vim.api.nvim_buf_delete(term_bufnr, { force = true }) -- Force close
@@ -55,7 +55,7 @@ vim.api.nvim_create_user_command(term_open, open_terminal, {})
 
 -- Function to send a command to the terminal
 local function send_to_terminal(cmd)
-	local term_bufnr = Locate_terminal() -- Find the terminal buffer
+	local term_bufnr = locate_terminal() -- Find the terminal buffer
 	if term_bufnr then
 		local terminal_id = vim.api.nvim_buf_get_var(term_bufnr, "terminal_job_id") -- Get terminal job ID
 		if terminal_id then
