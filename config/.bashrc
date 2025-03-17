@@ -117,7 +117,7 @@ if ! shopt -oq posix; then
 fi
 
 update() {
-	# Set variable name dotfiles to desired location
+	# Set variable name $dotfiles to desired location
 	dotfiles=$HOME/dotfiles/
 	# Ensure location is available
 	mv $dotfiles $HOME/dotfiles.bak

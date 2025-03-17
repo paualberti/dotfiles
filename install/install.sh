@@ -80,7 +80,3 @@ echo "Total packages installed: $installed_count"
 echo "Version: $(nvim --version)"
 
 sudo apt autoremove -y
-
-./setup.sh
-cd ..
-stow config
