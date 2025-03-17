@@ -8,8 +8,8 @@
 # Set variable name $dotfiles to desired location
 dotfiles=$HOME/dotfiles/
 # Ensure location is available
-mv $dotfiles $HOME/dotfiles.bak
-mkdir -p $dotfiles
+rm -rf $dotfiles
+# Clone the repo
 git clone --filter=blob:none https://github.com/paualberti/dotfiles.git $dotfiles
 cd $dotfiles/install
 # Create executable scripts
