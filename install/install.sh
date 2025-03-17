@@ -82,4 +82,5 @@ echo "Version: $(nvim --version)"
 sudo apt autoremove -y
 
 ./setup.sh
-./stow.sh ../config/
+cd ..
+stow config
