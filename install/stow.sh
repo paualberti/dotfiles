@@ -21,15 +21,15 @@ find . -mindepth 1 -exec sh -c '
         rel_path="${item#./}"
         target="$HOME/$rel_path"
         target_dir="$(dirname "$target")"
-        
+
         # Ensure target directories exist
         if [ ! -d "$target_dir" ]; then
             mkdir -p "$target_dir"
         fi
-        
+
         # Create symlink
         if [ -e "$target" ] || [ -L "$target" ]; then
-            echo "Skipping: $target already exists"
+            # echo "Skipping: $target already exists"
         else
             ln -s "$PWD/$rel_path" "$target"
             echo "Linked: $PWD/$rel_path -> $target"
