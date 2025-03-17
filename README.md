@@ -8,9 +8,7 @@
 # Set variable name dotfiles to desired location
 dotfiles=$HOME/dotfiles/
 # Ensure location is available
-if [ -d $dotfiles ]; then
-    mv $dotfiles $dotfiles.bak
-end
+mv $dotfiles $HOME/dotfiles.bak
 mkdir -p $dotfiles
 git clone --filter=blob:none https://github.com/paualberti/dotfiles.git $dotfiles
 cd $dotfiles/install
@@ -28,7 +26,8 @@ chmod +x install.sh setup.sh stow.sh
 # Setup neovim and a nerdfont
 ./setup.sh
 # Symlink configuration files
-stow ../config
+cd ..
+stow config
 ```
 
 </details>
@@ -39,7 +38,8 @@ stow ../config
 # Setup neovim and a nerdfont
 ./setup.sh
 # Symlink configuration files
-./stow.sh ../config
+cd ..
+./stow.sh config
 ```
 
 </details>
