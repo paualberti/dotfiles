@@ -126,7 +126,6 @@ update() {
 	cd $dotfiles/install
 	# Create executable scripts
 	chmod +x install.sh setup.sh stow.sh
-
 	# Install packages: ghostty, lazygit, fzf, ...
 	./install.sh
 	# Setup neovim and a nerdfont
