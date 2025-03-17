@@ -68,8 +68,8 @@ return {
 	{ "echasnovski/mini.map", opts = {} },
 	{ "echasnovski/mini.notify", event = "VeryLazy", opts = {} },
 	{ "echasnovski/mini.starter", opts = {} },
-	{ "echasnovski/mini.statusline", lazy = false, opts = {} },
-	{ "echasnovski/mini.tabline", lazy = false, opts = {} },
+	{ "echasnovski/mini.statusline", opts = {} },
+	{ "echasnovski/mini.tabline", opts = {} },
 	{ "echasnovski/mini.trailspace", opts = {} },
 
 	-- Other

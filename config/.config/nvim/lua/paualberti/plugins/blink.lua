@@ -31,58 +31,16 @@ return {
 		keymap = { preset = "default" },
 
 		completion = {
-			menu = {
-				border = "single",
-				draw = {
-					components = {
-						kind_icon = {
-							ellipsis = false,
-							text = function(ctx)
-								local icon = ctx.kind_icon
-								if vim.tbl_contains({ "Path" }, ctx.source_name) then
-									local dev_icon, _ = require("nvim-web-devicons").get_icon(ctx.label)
-									if dev_icon then
-										icon = dev_icon
-									end
-								else
-									icon = require("lspkind").symbolic(ctx.kind, { mode = "symbol" })
-								end
-
-								return icon .. ctx.icon_gap
-							end,
-
-							-- Optionally, use the highlight groups from nvim-web-devicons
-							-- You can also add the same function for `kind.highlight` if you want to
-							-- keep the highlight groups in sync with the icons.
-							highlight = function(ctx)
-								local hl = ctx.kind_hl
-								if vim.tbl_contains({ "Path" }, ctx.source_name) then
-									local dev_icon, dev_hl = require("nvim-web-devicons").get_icon(ctx.label)
-									if dev_icon then
-										hl = dev_hl
-									end
-								end
-								return hl
-							end,
-						},
-					},
-				},
-			},
+			menu = { border = "single" },
 			documentation = { window = { border = "single" } },
 		},
 		signature = { window = { border = "single" } },
-
-		-- enabled = function()
-		-- 	return not vim.tbl_contains({ "lua", "markdown" }, vim.bo.filetype)
-		-- 		and vim.bo.buftype ~= "prompt"
-		-- 		and vim.b.completion ~= false
-		-- end,
 
 		appearance = {
 			-- Sets the fallback highlight groups to nvim-cmp's highlight groups
 			-- Useful for when your theme doesn't support blink.cmp
 			-- Will be removed in a future release
-			use_nvim_cmp_as_default = true,
+			use_nvim_cmp_as_default = false,
 			-- Set to 'mono' for 'Nerd Font Mono' or 'normal' for 'Nerd Font'
 			-- Adjusts spacing to ensure icons are aligned
 			nerd_font_variant = "mono",

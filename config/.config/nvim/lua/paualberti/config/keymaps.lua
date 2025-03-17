@@ -9,7 +9,7 @@ vim.keymap.set("n", "<leader>bf", "1z=", { desc = "Insert first" })
 vim.keymap.set("n", "<leader>bi", "=gg=G", { desc = "Indent" })
 
 -- Improve consistency
-vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")
+vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>")
 vim.keymap.set({ "i", "x" }, "<C-c>", "<Esc>")
 vim.keymap.set("n", "J", "mzJ`z")
 

@@ -26,9 +26,9 @@ vim.o.splitbelow = true -- Horizontal splits will be below
 vim.o.splitright = true -- Vertical splits will be to the right
 vim.o.hlsearch = false -- Searches will not be highlighted
 vim.o.smoothscroll = true -- Scrolling works with screen lines
-vim.o.shiftwidth = 4 -- <TAB> is 4 spaces
-vim.o.tabstop = 4 -- Indent is 4 spaces
-vim.o.softtabstop = 4 -- Indent is 4 spaces
+vim.o.shiftwidth = 2 -- <TAB> is 2 spaces
+vim.o.tabstop = 2 -- Indent is 2 spaces
+vim.o.softtabstop = 2 -- Indent is 2 spaces
 vim.o.scrolloff = 7 -- Lines till the end of window
 vim.o.sidescrolloff = 8 -- Columns till the end of window
 
@@ -39,8 +39,8 @@ vim.o.wrap = false -- Display long lines as just one line
 vim.o.signcolumn = "yes" -- Always show sign column (otherwise it will shift text)
 vim.o.fillchars = "eob: " -- Don't show `~` outside of buffer
 
-vim.o.guicursor = ""
-vim.o.inccommand = "split"
+vim.o.guicursor = "" -- Always have a block style cursor
+vim.o.inccommand = "split" -- Split window for substitution
 
 -- Editing
 vim.o.ignorecase = true -- Ignore case when searching (use `\C` to force not doing that)
@@ -52,11 +52,6 @@ vim.o.smartindent = true -- Make indenting smart
 vim.o.completeopt = "menuone,noinsert,noselect" -- Customize completions
 vim.o.virtualedit = "block" -- Allow going past the end of line in visual block mode
 vim.o.formatoptions = "qjl1" -- Don't autoformat comments
-
--- Neovim version dependent
-if vim.fn.has("nvim-0.10") == 0 then
-	vim.o.termguicolors = true -- Enable gui colors
-end
 
 -- Some opinioneted extra UI options
 vim.o.pumheight = 10 -- Make popup menu smaller
@@ -70,3 +65,8 @@ end
 vim.o.foldmethod = "expr" -- Folds are determined by an expression
 vim.o.foldexpr = "v:lua.vim.treesitter.foldexpr()" -- Expression by which folds are detected
 vim.o.foldlevel = 99 -- Never show folds by default
+
+-- Neovim version dependent
+if vim.fn.has("nvim-0.10") == 0 then
+	vim.o.termguicolors = true -- Enable gui colors
+end

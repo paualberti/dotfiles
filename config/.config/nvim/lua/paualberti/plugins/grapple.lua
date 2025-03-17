@@ -1,10 +1,7 @@
 return {
 	"cbochs/grapple.nvim",
-	opts = {
-		scope = "git", -- also try out "git_branch"
-	},
-	-- event = { "BufReadPost", "BufNewFile" },
-	-- cmd = "Grapple",
+	opts = { scope = "git" },
+	cmd = "Grapple",
 	keys = {
 		{ "<C-t>", "<cmd>Grapple toggle<cr>", desc = "Grapple toggle tag" },
 		{ "<C-e>", "<cmd>Grapple toggle_tags<cr>", desc = "Grapple open tags window" },

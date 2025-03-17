@@ -1,45 +1,45 @@
-# Config
+# My personal dotfiles
 
 ## Step by step setup
 
-### Set a path
+### Download dotfiles
 
 ```
-path=<your_path>
+# Set variable name dotfiles to desired location
+dotfiles=$HOME/dotfiles/
+# Ensure location is available
+if [ -d $dotfiles ]; then
+    mv $dotfiles $dotfiles.bak
+end
+mkdir -p $dotfiles
+git clone --filter=blob:none https://github.com/paualberti/dotfiles.git $dotfiles
+cd $dotfiles/install
+# Create executable scripts
+chmod +x install.sh setup.sh stow.sh
 ```
 
-```
-path=$HOME/dotfiles/
-```
+### Use the scripts to setup the dotfiles
 
-### Clone the project
+<details><summary>With sudo acces</summary>
 
 ```
-git clone --filter=blob:none https://github.com/paualberti/dotfiles.git $path
-cd $path
-```
-
-### Setup applications
-
-```
-chmod +x setup.sh
+# Install packages: ghostty, lazygit, fzf, ...
+./install.sh
+# Setup neovim and a nerdfont
 ./setup.sh
+# Symlink configuration files
+stow ../config
 ```
 
-### Symlink config
+</details>
+
+<details><summary>Without sudo acces</summary>
 
 ```
-stow config
-```
-
-## All in one go
-
-```
-path=$HOME/dotfiles/
-rm -rf $path
-git clone --filter=blob:none https://github.com/paualberti/dotfiles.git $path
-cd $path
-chmod +x setup.sh
+# Setup neovim and a nerdfont
 ./setup.sh
-stow config
+# Symlink configuration files
+./stow.sh ../config
 ```
+
+</details>

@@ -5,7 +5,7 @@ return {
 	priority = 1000,
 	opts = {
 		bigfile = { enabled = true },
-		dashboard = { enabled = true },
+		dashboard = { enabled = false },
 		explorer = { enabled = false },
 		image = {
 			enabled = true,

@@ -16,7 +16,6 @@ python3.10-venv
 ruby-rubygems
 xsel
 libsdl2-dev
-npm
 cmake
 g++-12
 texlive-latex-base
@@ -25,30 +24,6 @@ EOL
 
 sudo apt-get update
 sudo apt upgrade -y
-
-# Install NerdFont
-font_path="$HOME/.local/share/fonts"
-font_name="$font_path/SauceCodeProNerdFont"
-base_name=$(basename "$font_name")
-if [ ! -d "$font_name" ]; then
-	mkdir -p "$font_name"
-	curl -Lo "$font_name.zip" "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/SourceCodePro.zip"
-	unzip "$font_name.zip" -d "$font_name"
-	rm "$font_name.zip"
-	echo "Installed $base_name"
-else
-	echo "$base_name already installed"
-fi
-
-# Neovim
-if ! command -v nvim >/dev/null 2>&1; then
-	curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.appimage
-	chmod +x nvim-linux-x86_64.appimage
-	sudo mkdir -p /opt/nvim
-	sudo mv nvim-linux-x86_64.appimage /opt/nvim/nvim
-else
-	echo neovim is already installed
-fi
 
 # Ghostty
 if ! command -v ghostty >/dev/null 2>&1; then
@@ -105,3 +80,6 @@ echo "Total packages installed: $installed_count"
 echo "Version: $(nvim --version)"
 
 sudo apt autoremove -y
+
+./setup.sh
+./stow.sh ../config/

@@ -117,15 +117,25 @@ if ! shopt -oq posix; then
 fi
 
 update() {
-	path=$HOME/dotfiles/
-	rm -rf $path
-	git clone --filter=blob:none https://github.com/paualberti/dotfiles.git $path
-	cd $path
-	chmod +x setup.sh
+	# Set variable name dotfiles to desired location
+	dotfiles=$HOME/dotfiles/
+	# Ensure location is available
+	if [ -d $dotfiles ]; then
+		mv $dotfiles $HOME/dotfiles.bak
+	fi
+	mkdir -p $dotfiles
+	git clone --filter=blob:none https://github.com/paualberti/dotfiles.git $dotfiles
+	cd $dotfiles/install
+	# Create executable scripts
+	chmod +x install.sh setup.sh stow.sh
+
+	# Install packages: ghostty, lazygit, fzf, ...
+	./install.sh
+	# Setup neovim and a nerdfont
 	./setup.sh
-	stow config
+	# Symlink configuration files
+	stow ../config
 }
 export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin"
 export PATH=$PATH:$HOME/.local/bin
-export PATH=$PATH:/opt/nvim
-# bluetoothctl connect 41:42:0B:3D:1E:5F &>> /dev/null
+kluetoothctl connect 41:42:0B:3D:1E:5F &>> /dev/null
