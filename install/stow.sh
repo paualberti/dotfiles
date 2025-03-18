@@ -28,9 +28,7 @@ find . -mindepth 1 -exec sh -c '
         fi
 
         # Create symlink
-        if [ -e "$target" ] || [ -L "$target" ]; then
-            # echo "Skipping: $target already exists"
-        else
+        if [ ! -e "$target" ] && [ ! -L "$target" ]; then
             ln -s "$PWD/$rel_path" "$target"
             echo "Linked: $PWD/$rel_path -> $target"
         fi
