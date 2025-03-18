@@ -145,4 +145,4 @@ homebrew() {
 export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin"
 export PATH=$PATH:$HOME/.local/bin
 bluetoothctl connect 41:42:0B:3D:1E:5F &>> /dev/null
-# eval "$($HOME/homebrew/bin/brew shellenv)"
+eval "$($HOME/homebrew/bin/brew shellenv)"

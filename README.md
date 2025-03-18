@@ -38,8 +38,7 @@ stow config
 # Setup neovim and a nerdfont
 ./setup.sh
 # Symlink configuration files
-cd ..
-./stow.sh config
+./stow.sh ../config
 ```
 
 </details>
