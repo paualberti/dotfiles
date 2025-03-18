@@ -134,6 +134,15 @@ update() {
 	cd ..
 	stow config
 }
+
+homebrew() {
+	git clone https://github.com/Homebrew/brew homebrew
+	eval "$(homebrew/bin/brew shellenv)"
+	brew update --force --quiet
+	chmod -R go-w "$(brew --prefix)/share/zsh"
+}
+
 export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin"
 export PATH=$PATH:$HOME/.local/bin
-kluetoothctl connect 41:42:0B:3D:1E:5F &>> /dev/null
+bluetoothctl connect 41:42:0B:3D:1E:5F &>> /dev/null
+# eval "$($HOME/homebrew/bin/brew shellenv)"
