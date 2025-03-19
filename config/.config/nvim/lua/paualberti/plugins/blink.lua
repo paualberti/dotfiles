@@ -113,7 +113,7 @@ return {
 		-- default value is `prefer_rust_with_warning`
 		--
 		-- See the fuzzy documentation for more information
-		fuzzy = { implementation = "prefer_rust_with_warning" },
+		fuzzy = { implementation = "lua" },
 	},
 	opts_extend = { "sources.default" },
 }

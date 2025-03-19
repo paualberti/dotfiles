@@ -14,7 +14,6 @@ return {
 			{ mode = { "n", "x" }, "<leader>g", group = "Git" },
 			{ mode = { "n", "x" }, "<leader>h", group = "Harpoon" },
 			{ mode = { "n", "x" }, "<leader>m", group = "Markdown" },
-			{ mode = { "n", "x" }, "<leader>mp", group = "Preview" },
 			{ mode = { "n", "x" }, "<leader>r", group = "Rename" },
 			{ mode = { "n", "x" }, "<leader>s", group = "Search" },
 			{ mode = { "n", "x" }, "<leader>t", group = "Terminal" },
