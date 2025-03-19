@@ -5,7 +5,6 @@ return {
 	dependencies = {
 		"nvim-tree/nvim-web-devicons",
 		-- "rafamadriz/friendly-snippets",
-		"onsails/lspkind.nvim",
 	},
 
 	-- use a release tag to download pre-built binaries
@@ -50,6 +49,7 @@ return {
 		-- elsewhere in your config, without redefining it, due to `opts_extend`
 		sources = {
 			default = { "lsp", "path", "snippets", "buffer" },
+			-- default = { "path", "snippets", "buffer" },
 			providers = {
 				buffer = {
 					opts = {
