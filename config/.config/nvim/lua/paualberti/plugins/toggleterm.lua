@@ -1,11 +1,6 @@
 return {
 	"paualberti/toggleterm.nvim",
-	version = "*",
+	branch = "master",
 	event = "VeryLazy",
-	opts = {
-		open_mapping = "<C-t>",
-		direction = "float",
-		float_opts = { padding = 2 },
-	},
-	keys = {},
+	opts = {},
 }
