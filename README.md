@@ -18,7 +18,7 @@ chmod +x install.sh setup.sh stow.sh
 
 ### Use the scripts to setup the dotfiles
 
-<details><summary>With sudo acces</summary>
+<details><summary>With sudo access</summary>
 
 ```
 # Install packages: ghostty, lazygit, fzf, ...
@@ -32,7 +32,7 @@ stow config
 
 </details>
 
-<details><summary>Without sudo acces</summary>
+<details><summary>Without sudo access</summary>
 
 ```
 # Setup neovim and a nerdfont
