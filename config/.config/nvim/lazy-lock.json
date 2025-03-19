@@ -41,5 +41,6 @@
   "showkeys": { "branch": "main", "commit": "8daf5abb5fece0c9e1fa2c5679aaf226a80f5c38" },
   "snacks.nvim": { "branch": "main", "commit": "5eac729fa290248acfe10916d92a5ed5e5c0f9ed" },
   "tairiki.nvim": { "branch": "master", "commit": "6c60996afc5c373d5b9363a1114146b5f7219b1e" },
+  "toggleterm.nvim": { "branch": "master", "commit": "9f224480f152c51ecc2acee2d8141d215912f2b3" },
   "which-key.nvim": { "branch": "main", "commit": "fcbf4eea17cb299c02557d576f0d568878e354a4" }
 }
