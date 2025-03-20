@@ -26,18 +26,18 @@ end)
 -- - Don't map in Operator-pending mode because it severely changes behavior:
 --   like `dj` on non-wrapped line will not delete it.
 -- - Condition on `v:count == 0` to allow easier use of relative line numbers.
-vim.keymap.set({ "n", "x" }, "j", [[v:count == 0 ? 'gj' : 'j']], { expr = true })
-vim.keymap.set({ "n", "x" }, "k", [[v:count == 0 ? 'gk' : 'k']], { expr = true })
+-- vim.keymap.set({ "n", "x" }, "j", [[v:count == 0 ? 'gj' : 'j']], { expr = true })
+-- vim.keymap.set({ "n", "x" }, "k", [[v:count == 0 ? 'gk' : 'k']], { expr = true })
 
 -- Copy/paste with system clipboard
-vim.keymap.set({ "n", "x" }, "gy", '"+y', { desc = "Copy to system clipboard" })
-vim.keymap.set("n", "gp", '"+p', { desc = "Paste from system clipboard" })
+vim.keymap.set({ "n", "x" }, "<leader>y", '"+y', { desc = "Copy to system clipboard" })
+vim.keymap.set("n", "<leader>p", '"+p', { desc = "Paste from system clipboard" })
 -- - Paste in Visual with `P` to not copy selected text (`:h v_P`)
-vim.keymap.set("x", "gp", '"+P', { desc = "Paste from system clipboard" })
+vim.keymap.set("x", "<leader>p", '"+P', { desc = "Paste from system clipboard" })
 
 -- Search inside visually highlighted text. Use `silent = false` for it to
 -- make effect immediately.
-vim.keymap.set("x", "g/", "<esc>/\\%V", { silent = false, desc = "Search inside visual selection" })
+vim.keymap.set("x", "<leader>/", "<esc>/\\%V", { silent = false, desc = "Search inside visual selection" })
 
 -- Search visually selected text (slightly better than builtins in
 -- Neovim>=0.8 but slightly worse than builtins in Neovim>=0.10)

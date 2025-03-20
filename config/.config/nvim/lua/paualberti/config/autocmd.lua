@@ -6,7 +6,7 @@ local augroup = vim.api.nvim_create_augroup("paualberti-autocmds", { clear = tru
 vim.api.nvim_set_hl(0, "YankHighlight", { bg = "#FFCBE1", fg = "#000000" })
 vim.api.nvim_create_autocmd("TextYankPost", {
 	callback = function()
-		vim.highlight.on_yank({ higroup = "YankHighlight", timeout = 750 })
+		vim.highlight.on_yank({ higroup = "YankHighlight", timeout = 500 })
 	end,
 	group = augroup,
 	desc = "Highlight on yank",

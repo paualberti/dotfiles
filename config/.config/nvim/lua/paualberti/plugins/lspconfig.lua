@@ -37,10 +37,13 @@ return {
 				},
 			},
 		},
+		keys = {
+			{ "<leader>cl", "<Cmd>Lazy<CR>", desc = "Lazy" },
+			{ "<leader>cm", "<Cmd>Mason<CR>", desc = "Mason" },
+			{ "<leader>cr", vim.lsp.buf.rename, desc = "Rename Object" },
+			{ "<leader>ca", vim.lsp.buf.code_action, desc = "Action" },
+		},
 		config = function(_, opts)
-			vim.keymap.set("n", "<leader>cl", "<Cmd>Lazy<CR>", { desc = "Lazy" })
-			vim.keymap.set("n", "<leader>cm", "<Cmd>Mason<CR>", { desc = "Mason" })
-
 			local ensure_installed = vim.tbl_keys(opts.servers or {})
 			vim.list_extend(ensure_installed, {
 				"stylua", -- Used to format Lua code

@@ -27,7 +27,14 @@ return {
 	{ "echasnovski/mini.visits", opts = {} },
 
 	-- Appearance
-	{ "echasnovski/mini.animate", opts = { scroll = { enable = false }, resize = { enable = false } } },
+	{
+		"echasnovski/mini.animate",
+		event = "VeryLazy",
+		opts = {
+			scroll = { enable = false },
+			resize = { enable = false },
+		},
+	},
 	-- { "echasnovski/mini.base16", opts = {} },
 	{ "echasnovski/mini.cursorword", opts = {} },
 	{
