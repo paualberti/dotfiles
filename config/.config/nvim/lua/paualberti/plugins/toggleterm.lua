@@ -26,7 +26,7 @@ return {
 	keys = {
 		{ "<C-t>", "<Cmd>ToggleTerm<CR>", desc = "ToggleTerm", mode = { "n", "i" } },
 		{
-			"<leader>tc",
+			"<C-c>",
 			function()
 				Close_terminals()
 			end,
