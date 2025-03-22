@@ -2,11 +2,11 @@
 -- Set autocmds --
 ------------------
 
-local augroup = vim.api.nvim_create_augroup("paualberti-autocmds", { clear = true })
+local augroup = vim.api.nvim_create_augroup("paualberti", { clear = true })
 vim.api.nvim_set_hl(0, "YankHighlight", { bg = "#FFCBE1", fg = "#000000" })
 vim.api.nvim_create_autocmd("TextYankPost", {
 	callback = function()
-		vim.highlight.on_yank({ higroup = "YankHighlight", timeout = 500 })
+		vim.highlight.on_yank({ higroup = "YankHighlight", timeout = 300 })
 	end,
 	group = augroup,
 	desc = "Highlight on yank",
