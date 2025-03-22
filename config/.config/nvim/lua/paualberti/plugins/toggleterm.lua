@@ -4,6 +4,6 @@ return {
 	opts = {},
 	keys = {
 		{ "<C-t>", "<Cmd>ToggleTerm<CR>", desc = "ToggleTerm", mode = { "n", "i" } },
-		{ "<C-c>", "<Cmd>TermClose", desc = "TermClose" },
+		{ "<C-c>", "<Cmd>TermClose<CR>", desc = "TermClose" },
 	},
 }
