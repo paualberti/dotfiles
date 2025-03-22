@@ -4,9 +4,8 @@ return {
 	dependencies = { "nvim-tree/nvim-web-devicons" },
 	opts = {
 		delay = 500,
-		icons = {
-			mappinqs = vim.g.have_nerd_font,
-		},
+		icons = { mappinqs = vim.g.have_nerd_font },
+		win = { no_overlap = true },
 		spec = {
 			{ mode = { "n", "x" }, "<leader>b", group = "Buffer" },
 			{ mode = { "n", "x" }, "<leader>c", group = "Code" },
