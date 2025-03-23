@@ -6,20 +6,13 @@ git
 stow
 vim
 ripgrep
-gnome-tweaks
 tree
 fzf
 neofetch
-openjdk-17-jre-headless
-openjdk-17-jdk-headless
-python3.10-venv
-ruby-rubygems
 xsel
 libsdl2-dev
 cmake
 g++-12
-texlive-latex-base
-cmdtest
 EOL
 
 sudo apt-get update
@@ -53,16 +46,12 @@ fi
 # Convert the list into an array
 PACKAGES_ARRAY=($PACKAGES)
 
-# Initialize a counter for installed packages
-installed_count=0
-
 # Loop through each package
 for package in "${PACKAGES_ARRAY[@]}"; do
 	# Check if the package is already installed
 	sudo apt install -y "$package" &> /dev/null
 	if [ $? -eq 0 ]; then
 		echo "$package is installed"
-		installed_count=$((installed_count + 1))
 	else
 		echo "$package is not installed"
 	fi
@@ -74,9 +63,5 @@ done
 flatpak install flathub io.bassi.Amberol -y
 #Celluloid
 flatpak install flathub io.github.celluloid_player.Celluloid -y
-
-# Print summary
-echo "Total packages installed: $installed_count"
-echo "Version: $(nvim --version)"
 
 sudo apt autoremove -y
