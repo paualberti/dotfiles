@@ -37,7 +37,7 @@ vim.keymap.set("x", "<leader>p", '"+P', { desc = "Paste from system clipboard" }
 
 -- Search inside visually highlighted text. Use `silent = false` for it to
 -- make effect immediately.
-vim.keymap.set("x", "<leader>/", "<esc>/\\%V", { silent = false, desc = "Search inside visual selection" })
+vim.keymap.set("x", "g/", "<esc>/\\%V", { silent = false, desc = "Search inside visual selection" })
 
 -- Search visually selected text (slightly better than builtins in
 -- Neovim>=0.8 but slightly worse than builtins in Neovim>=0.10)
