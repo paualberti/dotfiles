@@ -5,8 +5,8 @@ return {
 	},
 	ft = "markdown",
 	keys = {
-		{ "<leader>ms", "<Cmd>LivePreview start<CR>", desc = "Start" },
-		{ "<leader>mc", "<Cmd>LivePreview close<CR>", desc = "Close" },
+		{ "<leader>ms", "<Cmd>LivePreview start<CR>", desc = "LivePreview Start" },
+		{ "<leader>mc", "<Cmd>LivePreview close<CR>", desc = "LivePreview Close" },
 	},
 	config = function()
 		local aug = vim.api.nvim_create_augroup("LivePreview", { clear = true })

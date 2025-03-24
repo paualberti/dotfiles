@@ -14,7 +14,7 @@ return {
 	-- General workflow
 	{ "echasnovski/mini.bracketed", event = "VeryLazy", opts = {} },
 	{ "echasnovski/mini.bufremove", opts = {} },
-	{ "echasnovski/mini.diff", opts = {} },
+	{ "echasnovski/mini.diff", event = "VeryLazy", opts = {} },
 	{ "echasnovski/mini.extra", opts = {} },
 	{
 		"echasnovski/mini.sessions",
