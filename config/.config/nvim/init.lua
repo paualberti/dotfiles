@@ -20,6 +20,6 @@ require("lazy").setup({
 		cond = nil,
 	},
 	spec = { import = "paualberti.plugins" },
-	checker = { enabled = true },
+	checker = { enabled = false },
 	change_detection = { enabled = false },
 })

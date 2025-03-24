@@ -2,7 +2,7 @@
 -- Set autocmds --
 ------------------
 
-local augroup = vim.api.nvim_create_augroup("paualberti", { clear = true })
+local augroup = vim.api.nvim_create_augroup("user_cmds", { clear = true })
 vim.api.nvim_set_hl(0, "YankHighlight", { bg = "#FFCBE1", fg = "#000000" })
 vim.api.nvim_create_autocmd("TextYankPost", {
 	callback = function()
@@ -11,11 +11,6 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 	group = augroup,
 	desc = "Highlight on yank",
 })
--- vim.api.nvim_create_autocmd("BufEnter", {
--- 	command = "set formatoptions-=cro",
--- 	group = augroup,
--- 	desc = "Disable auto_comment on new line",
--- })
 vim.api.nvim_create_autocmd("VimResized", {
 	command = "wincmd =",
 	group = augroup,
@@ -41,4 +36,12 @@ vim.api.nvim_create_autocmd("BufReadPost", {
 	end,
 	group = augroup,
 	desc = "Go to last location within a buffer",
+})
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = { "help", "man" },
+	callback = function()
+		vim.keymap.set("n", "q", "<Cmd>wincmd q<CR>", { desc = "Quit help window" })
+	end,
+	group = augroup,
+	desc = "Quit help window",
 })

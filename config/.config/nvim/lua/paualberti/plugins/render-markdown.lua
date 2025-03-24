@@ -6,6 +6,9 @@ return {
 	---@module 'render-markdown'
 	---@type render.md.UserConfig
 	opts = {},
+	config = function()
+		vim.cmd("RenderMarkdown disable")
+	end,
 	keys = {
 		{ "<leader>mr", "<Cmd>RenderMarkdown toggle<CR>", desc = "Render Toggle" },
 	},

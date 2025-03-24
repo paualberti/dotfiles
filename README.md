@@ -2,6 +2,16 @@
 
 ## Step by step setup
 
+### ZSH setup
+
+```
+sudo apt install -y zsh
+curl -sS https://starship.rs/install.sh | sh
+
+chsh --shell /bin/zsh
+starship preset pure-preset -o ~/.config/starship.toml
+```
+
 ### Download dotfiles
 
 ```

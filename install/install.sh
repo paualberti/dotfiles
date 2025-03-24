@@ -57,8 +57,6 @@ for package in "${PACKAGES_ARRAY[@]}"; do
 	fi
 done
 
-# Flatpak
-
 #Amberol
 flatpak install flathub io.bassi.Amberol -y
 #Celluloid

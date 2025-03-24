@@ -1,8 +1,7 @@
 # Install NerdFont
-font_path="$HOME/.local/share/fonts"
-font_name="$font_path/SauceCodeProNerdFont"
+font_name="$HOME/.local/share/fonts/SauceCodeProNerdFont/SauceCodeProNerdFont"
 base_name=$(basename "$font_name")
-if [ ! -d "$font_name" ]; then
+if [ ! -d "$HOME/.local/share/fonts/SauceCodeProNerdFont/" ]; then
 	mkdir -p "$font_name"
 	curl -Lo "$font_name.zip" "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/SourceCodePro.zip"
 	unzip "$font_name.zip" -d "$font_name"
@@ -13,11 +12,19 @@ else
 fi
 
 # Neovim
-if ! command -v nvim >/dev/null 2>&1; then
+if [ ! -d "~/.local/bin/nvim/" ]; then
 	curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.appimage
 	chmod +x nvim-linux-x86_64.appimage
 	mkdir -p $HOME/.local/bin/
 	mv nvim-linux-x86_64.appimage $HOME/.local/bin/nvim
 else
-	echo neovim is already installed
+	echo "neovim is already installed"
+fi
+
+# Homebrew
+if [ ! -d "~/.local/homebrew/" ]; then
+	git clone --filter=blob:none https://github.com/Homebrew/brew ~/.local/homebrew
+	eval "$(~/.local/homebrew/bin/brew shellenv)"
+	brew update --force --quiet
+	chmod -R go-w "$(brew --prefix)/share/zsh"
 fi

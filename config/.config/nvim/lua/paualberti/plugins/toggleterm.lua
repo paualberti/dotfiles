@@ -3,7 +3,7 @@ return {
 	tag = "v0.1.0",
 	opts = {},
 	keys = {
-		{ "<C-t>", "<Cmd>ToggleTerm<CR>", desc = "ToggleTerm", mode = { "n", "i" } },
-		{ "<C-l>", "<Cmd>TermClose<CR>", desc = "TermClose", mode = "t" },
+		{ "<leader>to", "<Cmd>ToggleTerm<CR>", desc = "Open" },
+		{ "<leader>tc", "<Cmd>TermClose<CR>", desc = "close" },
 	},
 }
