@@ -6,8 +6,8 @@
 
 ```
 sudo apt install -y zsh
+# Prompt configuration
 curl -sS https://starship.rs/install.sh | sh
-
 chsh --shell /bin/zsh
 starship preset pure-preset -o ~/.config/starship.toml
 ```

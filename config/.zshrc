@@ -72,3 +72,6 @@ alias cd=z
 
 # Shell integrations
 eval "$(zoxide init zsh)"
+
+# Automatic connectivity to bluetooth devices
+# bluetoothctl connect 41:42:0B:3D:1E:5F &>> /dev/null
