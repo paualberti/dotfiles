@@ -18,6 +18,10 @@ EOL
 sudo apt-get update
 sudo apt upgrade -y
 
+# Zoxide
+curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
+zoxide init --cmd cd
+
 # Ghostty
 if ! command -v ghostty >/dev/null 2>&1; then
 	source /etc/os-release

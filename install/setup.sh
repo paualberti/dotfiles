@@ -20,11 +20,3 @@ if [ ! -d "~/.local/bin/nvim/" ]; then
 else
 	echo "neovim is already installed"
 fi
-
-# Homebrew
-if [ ! -d "~/.local/homebrew/" ]; then
-	git clone --filter=blob:none https://github.com/Homebrew/brew ~/.local/homebrew
-	eval "$(~/.local/homebrew/bin/brew shellenv)"
-	brew update --force --quiet
-	chmod -R go-w "$(brew --prefix)/share/zsh"
-fi
