@@ -19,6 +19,7 @@ require("lazy").setup({
 		version = "*",
 		cond = nil,
 	},
+	rocks = { enabled = false },
 	spec = { import = "paualberti.plugins" },
 	checker = { enabled = false },
 	change_detection = { enabled = false },
