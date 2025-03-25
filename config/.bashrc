@@ -87,10 +87,10 @@ fi
 # colored GCC warnings and errors
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
-# some more ls aliases
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
+# # some more ls aliases
+# alias ll='ls -alF'
+# alias la='ls -A'
+# alias l='ls -CF'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -116,34 +116,19 @@ if ! shopt -oq posix; then
 	fi
 fi
 
-update() {
-	# Set variable name $dotfiles to desired location
-	dotfiles=$HOME/dotfiles/
-	# Ensure location is available
-	rm -rf $dotfiles
-	# Clone the repo
-	git clone --filter=blob:none https://github.com/paualberti/dotfiles.git $dotfiles
-	cd $dotfiles/install
-	# Create executable scripts
-	chmod +x install.sh setup.sh stow.sh
-	# Install packages: ghostty, lazygit, fzf, ...
-	./install.sh
-	# Setup neovim and a nerdfont
-	./setup.sh
-	# Symlink configuration files
-	cd ..
-	stow config
-}
+##### Customization
 
-homebrew() {
-	git clone https://github.com/Homebrew/brew homebrew
-	eval "$(homebrew/bin/brew shellenv)"
-	brew update --force --quiet
-	chmod -R go-w "$(brew --prefix)/share/zsh"
-}
+if [ -f "/usr/local/bin/starship" ]; then
+	eval "$(starship init bash)"
+fi
 
-export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin"
-export PATH=$PATH:$HOME/.local/bin
-# bluetoothctl connect 41:42:0B:3D:1E:5F &>> /dev/null
-eval "$(starship init bash)"
+# Aliases
+alias cd=z
+alias nvim="$HOME/.local/bin/nvim"
+
+# Shell integrations
+eval "$(zoxide init zsh)"
 # eval "$($HOME/homebrew/bin/brew shellenv)"
+
+# Automatic connectivity to bluetooth devices
+# bluetoothctl connect 41:42:0B:3D:1E:5F &>> /dev/null
