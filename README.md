@@ -22,8 +22,6 @@ rm -rf $dotfiles
 # Clone the repo
 git clone --filter=blob:none https://github.com/paualberti/dotfiles.git $dotfiles
 cd $dotfiles/install
-# Create executable scripts
-chmod +x install.sh setup.sh stow.sh
 ```
 
 ### Use the scripts to setup the dotfiles

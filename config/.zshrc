@@ -36,11 +36,11 @@ autoload -Uz compinit && compinit
 zinit cdreplay -q
 
 # Keybindings
-bindkey -e
-bindkey '^[[Z' autosuggest-accept
-bindkey "^p" history-search-backward
-bindkey "^n" history-search-forward
-bindkey "^[w" kill-region
+bindkey -e # emacs Keybindings
+bindkey '^[[Z' autosuggest-accept # <S-tab>
+bindkey "^p" history-search-backward # From pivot
+bindkey "^n" history-search-forward # From pivot
+bindkey "^[w" kill-region # Delete WORD
 
 # Completion styling
 zstyle ":completion:*" matcher-list "m:{a-z}={A-Za-z}"

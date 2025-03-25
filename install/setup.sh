@@ -12,7 +12,7 @@ else
 fi
 
 # Neovim
-if [ ! -d "~/.local/bin/nvim/" ]; then
+if ! command -v nvim 2>&1 >/dev/null; then
 	curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.appimage
 	chmod +x nvim-linux-x86_64.appimage
 	mkdir -p $HOME/.local/bin/
