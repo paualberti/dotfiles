@@ -2,7 +2,7 @@
 
 ## Step by step setup
 
-### ZSH setup
+### Shell and prompt
 
 ```
 sudo apt install -y zsh
