@@ -4,7 +4,7 @@ return {
 	-- optional: provides snippets for the snippet source
 	dependencies = {
 		"nvim-tree/nvim-web-devicons",
-		-- "rafamadriz/friendly-snippets",
+		"rafamadriz/friendly-snippets",
 	},
 
 	-- use a release tag to download pre-built binaries
