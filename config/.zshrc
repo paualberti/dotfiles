@@ -71,6 +71,7 @@ test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors
 alias ls="ls --color=auto"
 alias cd=z
 alias nvim="$HOME/.local/bin/nvim"
+alias zig="$HOME/.local/bin/zig-linux-x86_64-0.14.0/zig"
 
 # Shell integrations
 eval "$(zoxide init zsh)"

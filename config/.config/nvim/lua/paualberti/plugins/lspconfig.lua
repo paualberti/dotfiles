@@ -24,6 +24,7 @@ return {
 		},
 		opts = {
 			servers = {
+				zls = {},
 				clangd = {},
 				lua_ls = {
 					settings = {
