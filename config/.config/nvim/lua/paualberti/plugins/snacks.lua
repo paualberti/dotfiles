@@ -29,7 +29,7 @@ return {
 			},
 			formatters = {
 				file = {
-					filename_first = true,
+					filename_first = false,
 					filename_only = false,
 				},
 			},

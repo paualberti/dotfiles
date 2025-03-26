@@ -27,7 +27,13 @@ return {
 		-- C-k: Toggle signature help
 		--
 		-- See the full "keymap" documentation for information on defining your own keymap.
-		keymap = { preset = "default" },
+		keymap = {
+			preset = "default",
+			["<C-l>"] = { "snippet_forward" },
+			["<C-h>"] = { "snippet_backward" },
+		},
+
+		cmdline = { completion = { menu = { auto_show = true } } },
 
 		completion = {
 			menu = { border = "single" },
@@ -62,48 +68,13 @@ return {
 							end, vim.api.nvim_list_bufs())
 						end,
 					},
-					-- For writers
-					-- keep case of first char
-					-- transform_items = function(a, items)
-					-- 	local keyword = a.get_keyword()
-					-- 	local correct, case
-					-- 	if keyword:match("^%l") then
-					-- 		correct = "^%u%l+$"
-					-- 		case = string.lower
-					-- 	elseif keyword:match("^%u") then
-					-- 		correct = "^%l+$"
-					-- 		case = string.upper
-					-- 	else
-					-- 		return items
-					-- 	end
-					--
-					-- 	-- avoid duplicates from the corrections
-					-- 	local seen = {}
-					-- 	local out = {}
-					-- 	for _, item in ipairs(items) do
-					-- 		local raw = item.insertText
-					-- 		if raw == nil then
-					-- 			return out
-					-- 		end
-					-- 		if raw:match(correct) then
-					-- 			local text = case(raw:sub(1, 1)) .. raw:sub(2)
-					-- 			item.insertText = text
-					-- 			item.label = text
-					-- 		end
-					-- 		if not seen[item.insertText] then
-					-- 			seen[item.insertText] = true
-					-- 			table.insert(out, item)
-					-- 		end
-					-- 	end
-					-- 	return out
-					-- end,
 				},
-				-- 	cmdline = {
-				-- 		-- ignores cmdline completions when executing shell commands
-				-- 		enabled = function()
-				-- 			return vim.fn.getcmdtype() ~= ":" or not vim.fn.getcmdline():match("^[%%0-9,'<>%-]*!")
-				-- 		end,
-				-- 	},
+				cmdline = {
+					-- ignores cmdline completions when executing shell commands
+					enabled = function()
+						return vim.fn.getcmdtype() ~= ":" or not vim.fn.getcmdline():match("^[%%0-9,'<>%-]*!")
+					end,
+				},
 			},
 		},
 
@@ -113,7 +84,7 @@ return {
 		-- default value is `prefer_rust_with_warning`
 		--
 		-- See the fuzzy documentation for more information
-		fuzzy = { implementation = "lua" },
+		fuzzy = { implementation = "prefer_rust_with_warning" },
 	},
 	opts_extend = { "sources.default" },
 }
