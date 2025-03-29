@@ -96,4 +96,4 @@ if [ -f "$HOME/.local/bin/zoxide" ]; then
 fi
 
 # Automatic connectivity to bluetooth devices
-# bluetoothctl connect 41:42:0B:3D:1E:5F &>> /dev/null
+bluetoothctl connect 41:42:0B:3D:1E:5F &>> /dev/null

@@ -7,7 +7,7 @@ return {
 		opts = { mappings = { start_with_preview = "" } },
 	},
 	{ "echasnovski/mini.comment", event = "VeryLazy", opts = {} },
-	{ "echasnovski/mini.pairs", event = "InsertEnter", opts = { mappings = { ["`"] = false } } },
+	{ "echasnovski/mini.pairs", event = "InsertEnter", opts = {} },
 	{ "echasnovski/mini.splitjoin", event = "VeryLazy", opts = {} },
 	{ "echasnovski/mini.surround", event = "VeryLazy", opts = {} },
 
