@@ -13,6 +13,7 @@ xsel
 libsdl2-dev
 cmake
 g++-12
+entr
 EOL
 
 sudo apt-get update
