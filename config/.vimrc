@@ -2,86 +2,106 @@
 " Autocommands "
 """"""""""""""""
 
-" Disable auto comment on new line
-autocmd BufEnter * set formatoptions-=cro
+augroup user_cmds
+	autocmd!
 
-" Resize splits when the terminal is resized
-autocmd VimResized * wincmd =
+	" Resize splits when the terminal is resized
+	autocmd VimResized * wincmd =
 
-" Delete trailing whitespace before saving
-autocmd BufWritePre * %s/\s\+$//e
+	" Delete trailing whitespace before saving
+	autocmd BufWritePre * %s/\s\+$//e
 
-" Go to last location when opening a buffer
-autocmd BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+	" Go to last location
+	autocmd BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+
+	" Quit help/man windows with q
+	autocmd FileType help,man nnoremap <buffer> q <Cmd>wincmd q<CR>
+augroup END
 
 """""""""""
-" Keymaps "
+" Keynoremaps "
 """""""""""
 
-let mapleader = " " " map leader to Space
+let noremapleader = " " " map leader to Space
 
-" Exit terminal mode with <Esc>
-tnoremap <Esc> <C-\><C-n>
+nnoremap <leader>z z=
+nnoremap <leader>i =gg=G
 
-" Open netrw
-nnoremap - :Ex<CR>
-
-" Useful keymaps
-nnoremap Y yg$
+" Improve consistency
+tnoremap <C-o> <C-\\><C-n>
+inoremap <C-c> <Esc>
+xnoremap <C-c> <Esc>
 nnoremap J mzJ`z
-nnoremap Q <nop>
 
-" Window resizing
-nnoremap <C-Up> <C-w>5+
-nnoremap <C-Down> <C-w>5-
-nnoremap <C-Right> <C-w>5>
-nnoremap <C-Left> <C-w>5<
+" Replace visually selected text
+xnoremap <leader>rf "hy:%s/<C-r>h/
+xnoremap <leader>rl "hy:s/<C-r>h/
 
-" Rename in visual mode
-vnoremap <leader>rf "hy:%s/<C-r>h/
-vnoremap <leader>rl "hy:s/<C-r>h/
+" Copy/paste with system clipboard
+nnoremap <leader>y "+y
+xnoremap <leader>y "+y
+nnoremap <leader>p "+p
+xnoremap <leader>p "+P
+
+" Search inside visually highlighted text. Use `silent = false` for it to
+" make effect immediately.
+xnoremap g/ <esc>/\\%V
 
 """""""""""
 " Options "
 """""""""""
 
-" Tabs and indentation
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
-set smartindent
-set breakindent
+" General
+set undofile
 
-" Search settings
-set incsearch
-set ignorecase
-set smartcase
-set nohlsearch
+set nobackup
+set nowritebackup
+set noswapfile
+
+set mouse=a
+filetype plugin indent on
 
 " Appearance
-set notitle
+" Appearance
+set breakindent
+set nocursorline
+set linebreak
 set number
 set relativenumber
+set splitbelow
+set splitright
+set nohlsearch
+set shiftwidth=4
+set tabstop=4
+set softtabstop=4
 set scrolloff=7
 set sidescrolloff=8
-set signcolumn=yes
-set showmode
-set cmdheight=1
-set laststatus=2
-set pumheight=5
-set guicursor=
+set statusline=2
 
-" Behavior
-set noconfirm
-set updatetime=100
-set timeoutlen=500
-set noerrorbells
-set noswapfile
-set nobackup
-set undofile
-set undodir=$HOME/.vim/undodir/
-set backspace=indent,eol,start
-set splitright
-set splitbelow
-set mouse=a
-set modifiable
+set ruler
+set showmode
+set nowrap
+
+set signcolumn=yes
+
+set guicursor=""
+
+" Editing
+set ignorecase
+set incsearch
+set infercase
+set smartcase
+set smartindent
+
+set completeopt=menuone,noinsert,noselect
+set virtualedit=block
+set formatoptions=qjl1
+
+" Some opinioneted extra UI options
+set pumheight=10
+
+syntax enable
+
+" Fold options
+set foldmethod=indent
+set foldlevel=99

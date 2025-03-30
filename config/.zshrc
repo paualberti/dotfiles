@@ -86,8 +86,8 @@ alias la='ls -A'
 # alias l='ls -Ag'
 
 # Aliases
-alias nvim="$HOME/.local/bin/nvim"
-alias zig="$HOME/.local/bin/zig-linux-x86_64-0.14.0/zig"
+alias nvim="$HOME/.local/bin/nvim" # Ensure nvim works
+export PATH="$PATH:$HOME/.local/bin/zig-linux-x86_64-0.14.0" # Add zig to $PATH
 
 # Zoxide
 if [ -f "$HOME/.local/bin/zoxide" ]; then
