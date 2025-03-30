@@ -4,9 +4,8 @@
 
 vim.keymap.set("n", "<leader>x", "<Cmd>source<CR>", { desc = "Source file" })
 
-vim.keymap.set("n", "<leader>bs", ":setlocal spelllang=", { desc = "Spanish" })
-vim.keymap.set("n", "<leader>bf", "1z=", { desc = "Insert first" })
-vim.keymap.set("n", "<leader>bi", "=gg=G", { desc = "Indent" })
+vim.keymap.set("n", "<leader>z", "z=", { desc = "Spelling suggestions" })
+vim.keymap.set("n", "<leader>i", "=gg=G", { desc = "Indent buffer" })
 
 -- Improve consistency
 vim.keymap.set("t", "<C-o>", "<C-\\><C-n>")
@@ -16,11 +15,6 @@ vim.keymap.set("n", "J", "mzJ`z")
 -- Replace visually selected text
 vim.keymap.set("x", "<leader>rf", '"hy:%s/<C-r>h/', { desc = "in File" })
 vim.keymap.set("x", "<leader>rl", '"hy:s/<C-r>h/', { desc = "in Line" })
-
--- Disable Q because it's hard to understand
-vim.keymap.set({ "n", "x" }, "Q", function()
-	print("Q is disabled")
-end)
 
 -- Move by visible lines. Notes:
 -- - Don't map in Operator-pending mode because it severely changes behavior:
@@ -46,11 +40,3 @@ if vim.fn.has("nvim-0.10") == 0 then
 	vim.keymap.set("x", "*", [[y/\V<C-R>=escape(@", '/\')<CR><CR>]], { desc = "Search forward" })
 	vim.keymap.set("x", "#", [[y?\V<C-R>=escape(@", '?\')<CR><CR>]], { desc = "Search backward" })
 end
-
--- -- Save and go to normal mode
--- vim.keymap.set(
--- 	{ "n", "i", "x" },
--- 	"<C-S>",
--- 	"<Esc><Cmd>silent! update | redraw<CR>",
--- 	{ desc = "Save and go to Normal mode" }
--- )

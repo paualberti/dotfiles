@@ -3,7 +3,9 @@
 ------------------
 
 local augroup = vim.api.nvim_create_augroup("user_cmds", { clear = true })
+
 vim.api.nvim_set_hl(0, "YankHighlight", { bg = "#FFCBE1", fg = "#000000" })
+
 vim.api.nvim_create_autocmd("TextYankPost", {
 	callback = function()
 		vim.highlight.on_yank({ higroup = "YankHighlight", timeout = 300 })
@@ -11,11 +13,13 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 	group = augroup,
 	desc = "Highlight on yank",
 })
+
 vim.api.nvim_create_autocmd("VimResized", {
-	command = "wincmd =",
+	command = [[wincmd =]],
 	group = augroup,
 	desc = "Resize splits on terminal resize",
 })
+
 vim.api.nvim_create_autocmd({ "BufWritePre" }, {
 	callback = function()
 		local save_cursor = vim.fn.getpos(".")
@@ -27,6 +31,7 @@ vim.api.nvim_create_autocmd({ "BufWritePre" }, {
 	group = augroup,
 	desc = "Delete trailing whitspaces",
 })
+
 vim.api.nvim_create_autocmd("BufReadPost", {
 	callback = function()
 		local last_pos = vim.fn.line("'\"")
@@ -35,13 +40,14 @@ vim.api.nvim_create_autocmd("BufReadPost", {
 		end
 	end,
 	group = augroup,
-	desc = "Go to last location within a buffer",
+	desc = "Go to last location",
 })
+
 vim.api.nvim_create_autocmd("FileType", {
 	pattern = { "help", "man" },
 	callback = function()
 		vim.keymap.set("n", "q", "<Cmd>wincmd q<CR>", { desc = "Quit help window" })
 	end,
 	group = augroup,
-	desc = "Quit help window",
+	desc = "Quit help/man windows with q",
 })

@@ -10,11 +10,7 @@ vim.o.writebackup = false -- Don't store backup while overwriting the file
 vim.o.swapfile = false -- Don't store a swapfile
 
 vim.o.mouse = "a" -- Enable mouse for all available modes
-
 vim.cmd("filetype plugin indent on") -- Enable all filetype plugins
-for _, v in ipairs({ "n", "v", "i" }) do
-	vim.o.mouse = vim.o.mouse .. v
-end
 
 -- Appearance
 vim.o.breakindent = true -- Indent wrapped lines to match line start
@@ -26,9 +22,9 @@ vim.o.splitbelow = true -- Horizontal splits will be below
 vim.o.splitright = true -- Vertical splits will be to the right
 vim.o.hlsearch = false -- Searches will not be highlighted
 vim.o.smoothscroll = true -- Scrolling works with screen lines
-vim.o.shiftwidth = 2 -- <TAB> is 2 spaces
-vim.o.tabstop = 2 -- Indent is 2 spaces
-vim.o.softtabstop = 2 -- Indent is 2 spaces
+vim.o.shiftwidth = 4 -- <TAB> is 4 spaces
+vim.o.tabstop = 4 -- Indent is 4 spaces
+vim.o.softtabstop = 4 -- Indent is 4 spaces
 vim.o.scrolloff = 7 -- Lines till the end of window
 vim.o.sidescrolloff = 8 -- Columns till the end of window
 
@@ -58,7 +54,7 @@ vim.o.pumheight = 10 -- Make popup menu smaller
 
 -- Enable syntax highlighting if it wasn't already (as it is time consuming)
 if vim.fn.exists("syntax_on") ~= 1 then
-	vim.cmd([[syntax enable]])
+	vim.cmd("syntax enable")
 end
 
 -- Fold options
@@ -66,7 +62,5 @@ vim.o.foldmethod = "expr" -- Folds are determined by an expression
 vim.o.foldexpr = "v:lua.vim.treesitter.foldexpr()" -- Expression by which folds are detected
 vim.o.foldlevel = 99 -- Never show folds by default
 
--- Neovim version dependent
-if vim.fn.has("nvim-0.10") == 0 then
-	vim.o.termguicolors = true -- Enable gui colors
-end
+-- Diagnostics settings
+vim.diagnostic.config({ virtual_text = true }) -- Show diagnostics inline
