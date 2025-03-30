@@ -1,21 +1,31 @@
 return {
 	-- Text editing
 	{ "echasnovski/mini.ai", event = "VeryLazy", opts = {} },
-	{
-		"echasnovski/mini.align",
-		event = "VeryLazy",
-		opts = { mappings = { start_with_preview = "" } },
-	},
-	{ "echasnovski/mini.comment", event = "VeryLazy", opts = {} },
+	{ "echasnovski/mini.align", opts = { mappings = { start_with_preview = "" } }, keys = { "ga" } },
+	{ "echasnovski/mini.comment", opts = {}, keys = { "gc", mode = { "n", "x" } } },
 	{ "echasnovski/mini.pairs", event = "InsertEnter", opts = {} },
-	{ "echasnovski/mini.splitjoin", event = "VeryLazy", opts = {} },
-	{ "echasnovski/mini.surround", event = "VeryLazy", opts = {} },
+	{ "echasnovski/mini.splitjoin", opts = {}, keys = { "gS" } },
+	{
+		"echasnovski/mini.surround",
+		opts = {
+			mappings = {
+				add = "gsa", -- Add surrounding in Normal and Visual modes
+				delete = "gsd", -- Delete surrounding
+				find = "gsf", -- Find surrounding (to the right)
+				find_left = "gsF", -- Find surrounding (to the left)
+				highlight = "gsh", -- Highlight surrounding
+				replace = "gsr", -- Replace surrounding
+				update_n_lines = "gsn", -- Update `n_lines`
+
+				suffix_last = "l", -- Suffix to search with "prev" method
+				suffix_next = "n", -- Suffix to search with "next" method
+			},
+		},
+		keys = { "gs" },
+	},
 
 	-- General workflow
-	{ "echasnovski/mini.bracketed", event = "VeryLazy", opts = {} },
-	{ "echasnovski/mini.bufremove", opts = {} },
 	{ "echasnovski/mini.diff", event = "VeryLazy", opts = {} },
-	{ "echasnovski/mini.extra", opts = {} },
 	{
 		"echasnovski/mini.sessions",
 		opts = {},
@@ -24,7 +34,6 @@ return {
 			{ "<C-l>", "<Cmd>lua MiniSessions.read()<CR>", desc = "Load Session" },
 		},
 	},
-	{ "echasnovski/mini.visits", opts = {} },
 
 	-- Appearance
 	{
@@ -35,8 +44,6 @@ return {
 			resize = { enable = false },
 		},
 	},
-	-- { "echasnovski/mini.base16", opts = {} },
-	{ "echasnovski/mini.cursorword", opts = {} },
 	{
 		"echasnovski/mini.hipatterns",
 		event = "VeryLazy",
@@ -56,11 +63,10 @@ return {
 			})
 		end,
 	},
-	{ "echasnovski/mini.notify", event = "VeryLazy", opts = {} },
-	{ "echasnovski/mini.statusline", opts = {} },
-	{ "echasnovski/mini.tabline", opts = {} },
+	-- { "echasnovski/mini.statusline", opts = {} },
+	-- { "echasnovski/mini.tabline", opts = {} },
 
 	-- Other
-	{ "echasnovski/mini.doc", opts = {} },
-	{ "echasnovski/mini.test", opts = {} },
+	-- { "echasnovski/mini.doc", opts = {} },
+	-- { "echasnovski/mini.test", opts = {} },
 }

@@ -7,7 +7,6 @@ return {
 		icons = { mappinqs = vim.g.have_nerd_font },
 		win = { no_overlap = true },
 		spec = {
-			{ mode = { "n", "x" }, "<leader>b", group = "Buffer" },
 			{ mode = { "n", "x" }, "<leader>c", group = "Code" },
 			{ mode = { "n", "x" }, "<leader>f", group = "Find" },
 			{ mode = { "n", "x" }, "<leader>g", group = "Git" },
@@ -18,6 +17,10 @@ return {
 			{ mode = { "n", "x" }, "<leader>t", group = "Terminal" },
 			{ mode = { "n", "x" }, "<leader>u", group = "UI options" },
 			{ mode = { "n", "x" }, "<leader>ut", group = "Theme Switch" },
+			{ mode = { "n", "x" }, "gS", group = "Splitjoin" },
+			{ mode = { "n", "x" }, "ga", group = "Align" },
+			{ mode = { "n", "x" }, "gc", group = "Comment" },
+			{ mode = { "n", "x" }, "gs", group = "Surround" },
 		},
 	},
 }

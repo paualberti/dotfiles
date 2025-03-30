@@ -15,11 +15,12 @@ return {
 	{
 		-- Main LSP Configuration
 		"neovim/nvim-lspconfig",
-		event = "BufEnter",
+		event = "VeryLazy",
 		dependencies = {
 			{ "williamboman/mason.nvim", opts = {} },
 			"williamboman/mason-lspconfig.nvim",
 			"WhoIsSethDaniel/mason-tool-installer.nvim",
+			"echasnovski/mini.notify",
 			"saghen/blink.cmp",
 		},
 		opts = {

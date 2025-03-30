@@ -81,7 +81,7 @@ return {
 		{ "<leader>sw",      function() Snacks.picker.grep_word() end,                               desc = "Visual selection or word", mode = { "n", "x" } },
 		-- search
 		{ '<leader>s"',      function() Snacks.picker.registers() end,                               desc = "Registers" },
-		{ '<leader>s/',      function() Snacks.picker.search_history() end,                          desc = "Search History" },
+		{ "<leader>s/",      function() Snacks.picker.search_history() end,                          desc = "Search History" },
 		{ "<leader>sa",      function() Snacks.picker.autocmds() end,                                desc = "Autocmds" },
 		{ "<leader>sb",      function() Snacks.picker.lines() end,                                   desc = "Buffer Lines" },
 		{ "<leader>sc",      function() Snacks.picker.command_history() end,                         desc = "Command History" },
