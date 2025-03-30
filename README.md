@@ -15,16 +15,12 @@ starship preset pure-preset -o ~/.config/starship.toml
 ### Download dotfiles
 
 ```
-# Set variable name $dotfiles to desired location
-dotfiles=$HOME/dotfiles/
-# Ensure location is available
-rm -rf $dotfiles
 # Clone the repo
-git clone --filter=blob:none https://github.com/paualberti/dotfiles.git $dotfiles
-cd $dotfiles/install
+git clone --filter=blob:none https://github.com/paualberti/dotfiles.git $HOME/dotfiles
+cd $HOME/dotfiles/install
 ```
 
-### Use the scripts to setup the dotfiles
+### Execute the scripts
 
 <details><summary>With sudo access</summary>
 
