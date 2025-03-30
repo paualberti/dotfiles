@@ -29,17 +29,19 @@ return {
 		-- See the full "keymap" documentation for information on defining your own keymap.
 		keymap = {
 			preset = "default",
+			["<C-space>"] = { "show_and_insert" },
+			["<C-o>"] = { "select_accept_and_enter" },
 			["<C-l>"] = { "snippet_forward" },
 			["<C-h>"] = { "snippet_backward" },
 		},
 
-		cmdline = { completion = { menu = { auto_show = true } } },
+		cmdline = { keymap = { preset = "inherit" } },
 
-		completion = {
-			menu = { border = "single" },
-			documentation = { window = { border = "single" } },
-		},
-		signature = { window = { border = "single" } },
+		-- completion = {
+		-- 	menu = { border = "single" },
+		-- 	documentation = { window = { border = "single" } },
+		-- },
+		-- signature = { window = { border = "single" } },
 
 		appearance = {
 			-- Sets the fallback highlight groups to nvim-cmp's highlight groups
