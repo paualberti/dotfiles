@@ -1,9 +1,6 @@
 return {
 	"brianhuster/live-preview.nvim",
-	keys = {
-		{ "<leader>ms", "<Cmd>LivePreview start<CR>", desc = "LivePreview Start" },
-		{ "<leader>mc", "<Cmd>LivePreview close<CR>", desc = "LivePreview Close" },
-	},
+	-- dependencies = { "ibhagwan/fzf-lua" },
 	config = function()
 		local aug = vim.api.nvim_create_augroup("LivePreview", { clear = true })
 		vim.api.nvim_create_autocmd("VimLeave", {
@@ -15,4 +12,8 @@ return {
 			group = aug,
 		})
 	end,
+	keys = {
+		{ "<leader>ms", "<Cmd>LivePreview start<CR>", desc = "LivePreview Start" },
+		{ "<leader>mc", "<Cmd>LivePreview close<CR>", desc = "LivePreview Close" },
+	},
 }

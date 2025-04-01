@@ -2,10 +2,7 @@ return {
 	"saghen/blink.cmp",
 	event = "VeryLazy",
 	-- optional: provides snippets for the snippet source
-	dependencies = {
-		"nvim-tree/nvim-web-devicons",
-		"rafamadriz/friendly-snippets",
-	},
+	dependencies = { "nvim-tree/nvim-web-devicons", "rafamadriz/friendly-snippets" },
 
 	-- use a release tag to download pre-built binaries
 	version = "*",
