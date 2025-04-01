@@ -13,7 +13,7 @@ xsel
 libsdl2-dev
 cmake
 g++-12
-entr
+pandoc
 EOL
 
 sudo apt-get update
