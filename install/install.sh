@@ -20,8 +20,12 @@ sudo apt-get update
 sudo apt upgrade -y
 
 # Zoxide
-curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
-zoxide init zsh
+if ! command -v which z >/dev/null 2>&1; then
+	curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
+	zoxide init zsh &> /dev/null
+else
+	echo zoxide is already installed
+fi
 
 # Ghostty
 if ! command -v ghostty >/dev/null 2>&1; then
