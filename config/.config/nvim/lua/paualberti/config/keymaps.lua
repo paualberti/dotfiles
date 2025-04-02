@@ -8,7 +8,7 @@ vim.keymap.set("n", "<leader>z", "z=", { desc = "Spelling suggestions" })
 vim.keymap.set("n", "<leader>i", "=gg=G", { desc = "Indent buffer" })
 
 -- Improve consistency
-vim.keymap.set("t", "<C-o>", "<C-\\><C-n>")
+vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")
 vim.keymap.set({ "i", "x" }, "<C-c>", "<Esc>")
 vim.keymap.set("n", "J", "mzJ`z")
 

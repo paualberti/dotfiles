@@ -42,8 +42,6 @@ return {
 		keys = {
 			{ "<leader>cl", "<Cmd>Lazy<CR>", desc = "Lazy" },
 			{ "<leader>cm", "<Cmd>Mason<CR>", desc = "Mason" },
-			{ "<leader>cr", vim.lsp.buf.rename, desc = "Rename Object" },
-			{ "<leader>ca", vim.lsp.buf.code_action, desc = "Action" },
 		},
 		config = function(_, opts)
 			local ensure_installed = vim.tbl_keys(opts.servers or {})
