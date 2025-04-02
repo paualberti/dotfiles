@@ -32,15 +32,17 @@ return {
 			["<C-h>"] = { "snippet_backward", "fallback" },
 			["<C-n>"] = { "select_next", "fallback" },
 			["<C-p>"] = { "select_prev", "fallback" },
+			["<C-j>"] = { "select_next", "fallback" },
+			["<C-k>"] = { "select_prev", "fallback" },
 		},
 
 		cmdline = { keymap = { preset = "inherit" } },
 
-		-- completion = {
-		-- 	menu = { border = "single" },
-		-- 	documentation = { window = { border = "single" } },
-		-- },
-		-- signature = { window = { border = "single" } },
+		completion = {
+			menu = { border = "single" },
+			documentation = { window = { border = "single" } },
+		},
+		signature = { window = { border = "single" } },
 
 		appearance = {
 			-- Sets the fallback highlight groups to nvim-cmp's highlight groups
