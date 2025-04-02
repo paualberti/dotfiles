@@ -20,6 +20,7 @@ return {
 			{ mode = { "n", "x" }, "gS", group = "Splitjoin" },
 			{ mode = { "n", "x" }, "ga", group = "Align" },
 			{ mode = { "n", "x" }, "gc", group = "Comment" },
+			{ mode = { "n", "x" }, "gr", group = "LSP" },
 			{ mode = { "n", "x" }, "S", group = "Surround" },
 		},
 	},

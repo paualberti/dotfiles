@@ -30,6 +30,7 @@
   "oil.nvim": { "branch": "master", "commit": "975a77cce3c8cb742bc1b3629f4328f5ca977dad" },
   "outline.nvim": { "branch": "main", "commit": "90fb2f96eed97abe3d1c5c3fef1103ae6bea3cf8" },
   "render-markdown.nvim": { "branch": "main", "commit": "bfbb46af43c95115a06419ef290e16e2fa2a1941" },
+  "rose-pine": { "branch": "main", "commit": "00ec4cec924b624920baac9d42eac02e1efcae76" },
   "showkeys": { "branch": "main", "commit": "8daf5abb5fece0c9e1fa2c5679aaf226a80f5c38" },
   "snacks.nvim": { "branch": "main", "commit": "5eac729fa290248acfe10916d92a5ed5e5c0f9ed" },
   "tairiki.nvim": { "branch": "master", "commit": "5f10a0438a43fcba869f9fa9a1d786b2859548be" },
