@@ -6,9 +6,6 @@ return {
 		opts = {
 			options = { transparent = false },
 		},
-		init = function()
-			vim.cmd("colorscheme nordfox")
-		end,
 		keys = {
 			{ "<leader>utN", "<Cmd>colorscheme nightfox<CR>", desc = "Nightfox" },
 			{ "<leader>utn", "<Cmd>colorscheme nordfox<CR>", desc = "Nordfox" },
