@@ -26,10 +26,12 @@ return {
 		-- See the full "keymap" documentation for information on defining your own keymap.
 		keymap = {
 			preset = "default",
-			["<C-space>"] = { "show_and_insert" },
-			["<C-o>"] = { "select_accept_and_enter" },
-			["<C-l>"] = { "snippet_forward" },
-			["<C-h>"] = { "snippet_backward" },
+			["<C-space>"] = { "show_and_insert", "fallback" },
+			["<C-o>"] = { "select_accept_and_enter", "fallback" },
+			["<C-l>"] = { "snippet_forward", "fallback" },
+			["<C-h>"] = { "snippet_backward", "fallback" },
+			["<C-n>"] = { "select_next", "fallback" },
+			["<C-p>"] = { "select_prev", "fallback" },
 		},
 
 		cmdline = { keymap = { preset = "inherit" } },

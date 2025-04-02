@@ -12,7 +12,7 @@ return {
 	},
 	opts = {},
 	keys = {
-		{ "<C-t>", "<Cmd>ToggleTerm<CR>", desc = "Open" },
-		{ "<leader>tc", "<Cmd>TermClose<CR>", desc = "close" },
+		{ "<C-t>", "<Cmd>ToggleTerm<CR>", desc = "ToggleTerm" },
+		{ "<leader>tc", "<Cmd>TermClose<CR>", desc = "TermClose" },
 	},
 }
