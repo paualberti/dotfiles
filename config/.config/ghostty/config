@@ -1,6 +1,6 @@
 font-family = SauceCodePro Nerd Font
 font-size = 13
-theme = nordfox
+# theme = nordfox
 # theme = Tomorrow Night Eighties
 # theme = catppuccin-macchiato
 shell-integration-features = no-cursor,sudo,no-title
