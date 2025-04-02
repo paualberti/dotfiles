@@ -1,4 +1,18 @@
 return {
+	{
+		"rose-pine/neovim",
+		name = "rose-pine",
+		opts = {
+			styles = {
+				bold = false,
+				italic = false,
+				transparency = true,
+			},
+		},
+		init = function()
+			vim.cmd("colorscheme rose-pine")
+		end,
+	},
 	-- nightfox
 	{
 		"EdenEast/nightfox.nvim",
